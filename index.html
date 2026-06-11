@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bons Drinks – Open Bar e coquetelaria premium para casamentos, formaturas, aniversários e eventos corporativos em Santa Maria, RS.">
-  <meta property="og:title" content="Bons Drinks – Open Bar & Eventos em Santa Maria, RS">
-  <meta property="og:description" content="Drinks artesanais e open bar premium para seu evento. Atendemos Santa Maria, RS e região.">
-  <meta property="og:image" content="assets/DSC04255.jpg">
-  <title>Bons Drinks – Open Bar e Eventos em Santa Maria, RS</title>
-  <meta name="theme-color" content="#0b0d0b">
+  <meta name="description" content="Bons Drinks – Open Bar e coquetelaria premium para casamentos, formaturas, aniversários e eventos corporativos em Santa Maria, RS. Drinks artesanais que transformam seu evento.">
+  <meta property="og:title" content="Bons Drinks – Open Bar & Eventos Premium em Santa Maria, RS">
+  <meta property="og:description" content="Drinks artesanais e open bar premium para seu evento. Coquetelaria que transforma momentos em memórias. Santa Maria, RS e região.">
+  <meta property="og:image" content="./Assets/evento.jpg">
+  <title>Bons Drinks – Open Bar e Coquetelaria Premium | Santa Maria, RS</title>
+  <meta name="theme-color" content="rgb(8,10,8)">
 
   <script defer type="application/ld+json">
   {
@@ -24,9 +24,7 @@
       "addressRegion": "RS",
       "addressCountry": "BR"
     },
-    "sameAs": [
-      "https://www.instagram.com/bonsdrinkssm/"
-    ],
+    "sameAs": ["https://www.instagram.com/bonsdrinkssm/"],
     "priceRange": "$$",
     "openingHours": "Mo-Su 09:00-22:00"
   }
@@ -34,297 +32,1145 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;700&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      min-height: 100%;
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    .elementor, .elementor-page, .elementor-canvas, .elementor-widget-html {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    .elementor-widget-html, .elementor-widget-container {
-      padding: 0 !important;
-      margin: 0 !important;
-      width: 100%;
-    }
-
-    #bonsHeader {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      z-index: 300;
-    }
+    /* =============================================
+       RESET & ROOT
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink: #0b0d0b;
-      --forest: #0e2318;
-      --moss: #163b27;
-      --fern: #22593c;
-      --gold: #c8993a;
-      --gold-lt: #e8be6a;
-      --gold-glow: rgba(200, 153, 58, .18);
-      --cream: #f5eed8;
-      --white: #ffffff;
-      --wa: #25D366;
-      --wa-dark: #1ebe5c;
-      --radius: 10px;
-      --transition: .35s cubic-bezier(.4, 0, .2, 1);
-      --shadow: 0 20px 60px rgba(0, 0, 0, .35);
+      --black:    #080a08;
+      --deep:     #0c0f0c;
+      --forest:   #0e1f12;
+      --moss:     #142b1a;
+      --fern:     #1c4228;
+      --sage:     #265235;
+      --gold:     #c8973a;
+      --gold-lt:  #e4b86a;
+      --gold-dim: rgba(200,151,58,.15);
+      --gold-glow:rgba(200,151,58,.25);
+      --cream:    #f4edda;
+      --muted:    rgba(244,237,218,.55);
+      --wa:       #25D366;
+      --wa-dk:    #1ebe5c;
+      --r:        12px;
+      --t:        .38s cubic-bezier(.4,0,.2,1);
+      --sh:       0 24px 72px rgba(0,0,0,.45);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--ink); color: var(--cream); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
-    img, svg { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; width: auto; }
-    button { border: none; background: none; font: inherit; color: inherit; cursor: pointer; width: auto; }
-    a:focus-visible, button:focus-visible, summary:focus-visible {
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    body.locked { overflow: hidden; }
+
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { border: none; background: none; font: inherit; color: inherit; cursor: pointer; }
+    ul { list-style: none; }
+    section { width: 100%; scroll-margin-top: 90px; }
+
+    a:focus-visible, button:focus-visible {
       outline: 2px solid var(--gold-lt);
       outline-offset: 3px;
-      border-radius: 8px;
+      border-radius: 6px;
     }
-    header, main, section, footer { width: 100%; }
-    section { scroll-margin-top: 100px; }
-    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
-    #bonsLoader {
-      position: fixed; inset: 0; background: var(--ink); z-index: 9999;
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity .5s ease, visibility .5s ease;
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+
+    /* =============================================
+       TYPOGRAPHY
+    ============================================= */
+    .display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -.01em;
     }
-    #bonsLoader img { width: 140px; animation: bonsPulse 1.5s ease-in-out infinite; }
-
-    .eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
-    .section-pad { padding: 8rem 0; }
-    .section-header { text-align: center; margin-bottom: 4rem; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 900; line-height: 1.05; color: var(--gold-lt); margin: .8rem 0; }
-    .section-desc { max-width: 580px; margin: 1rem auto 0; font-size: 1rem; line-height: 1.8; color: rgba(245, 238, 216, .62); }
-    .divider { width: 3.6rem; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
-    .divider-center { width: 6rem; height: 1px; margin: 0 auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-
-    .btn, .drink-order-btn, .nav-cta { display: inline-flex; width: auto; align-items: center; justify-content: center; }
-    .btn { gap: .7rem; padding: .95rem 1.6rem; border-radius: var(--radius); text-transform: uppercase; letter-spacing: .13em; font-size: .78rem; font-weight: 700; transition: var(--transition); white-space: nowrap; }
-    .btn-gold { background: var(--gold); color: var(--ink); box-shadow: 0 0 0 0 var(--gold-glow); }
-    .btn-gold:hover { transform: translateY(-3px); background: var(--gold-lt); box-shadow: 0 0 40px 10px var(--gold-glow); }
-    .btn-outline { border: 1px solid rgba(200, 153, 58, .35); color: var(--gold-lt); background: transparent; }
-    .btn-outline:hover { transform: translateY(-3px); border-color: var(--gold); background: rgba(200, 153, 58, .08); }
-    .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 10px 26px rgba(37, 211, 102, .22); }
-    .btn-wa:hover { background: var(--wa-dark); transform: translateY(-3px); }
-    .full-width-center { width: 100%; justify-content: center; }
-
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .85s ease, transform .85s ease; }
-    .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity .85s ease, transform .85s ease; }
-    .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity .85s ease, transform .85s ease; }
-    .reveal.in, .reveal-left.in, .reveal-right.in { opacity: 1; transform: none; }
-
-    header { padding: 1.3rem 0; border-bottom: 1px solid transparent; transition: padding var(--transition), background var(--transition), border-color var(--transition), backdrop-filter var(--transition); }
-    #bonsHeader.stuck { position: fixed !important; background: rgba(11, 13, 11, .88) !important; border-color: rgba(200, 153, 58, .12) !important; backdrop-filter: blur(18px) !important; -webkit-backdrop-filter: blur(18px) !important; padding: .9rem 0 !important; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-    .logo { display: flex; align-items: center; width: auto; }
-    .logo img { max-height: 56px; width: auto; }
-    nav ul { list-style: none; display: flex; align-items: center; gap: 2.2rem; }
-    nav a { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(245, 238, 216, .7); position: relative; transition: var(--transition); }
-    nav a::after { content: ""; position: absolute; left: 0; bottom: -.35rem; width: 0; height: 1px; background: var(--gold); transition: var(--transition); }
-    nav a:hover, nav a.active { color: var(--gold-lt); }
-    nav a:hover::after, nav a.active::after { width: 100%; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; padding: .4rem; position: relative; z-index: 301; }
-    .hamburger span { width: 22px; height: 2px; background: var(--gold); display: block; transition: var(--transition); }
-    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-    .mobile-nav { position: fixed; inset: 0; z-index: 290; background: rgba(11, 13, 11, .97); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; padding: 5.5rem 1.25rem 2rem; transform: translateX(100%); opacity: 0; visibility: hidden; transition: transform .4s cubic-bezier(.77, 0, .175, 1), opacity .4s; text-align: center; }
-    .mobile-nav.open { transform: none; opacity: 1; visibility: visible; }
-    .mobile-nav a { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; letter-spacing: .02em; color: rgba(245, 238, 216, .9); transition: .3s; position: relative; }
-    .mobile-nav a:hover, .mobile-nav a.active { color: var(--gold-lt); }
-    .mobile-nav .btn { margin-top: 1rem; font-family: 'DM Sans', sans-serif; font-size: .72rem; letter-spacing: .12em; padding: .9rem 1.2rem; width: min(100%, 280px); }
-
-    #inicio { position: relative; min-height: 100vh; padding-top: 8rem; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(circle at 72% 28%, rgba(34, 89, 60, .62), transparent 30%), radial-gradient(circle at 20% 75%, rgba(200, 153, 58, .13), transparent 25%), linear-gradient(180deg, #07110d 0%, #0e2318 45%, #0b0d0b 100%); }
-    .hero-bg::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px); background-size: 42px 42px; opacity: .18; pointer-events: none; }
-    .hero-orb { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; animation: bonsOrbFloat 14s ease-in-out infinite; }
-    .hero-orb-1 { width: 620px; height: 620px; right: -120px; top: -120px; background: radial-gradient(circle, rgba(34, 89, 60, .58) 0%, transparent 70%); }
-    .hero-orb-2 { width: 380px; height: 380px; left: -80px; bottom: 10%; background: radial-gradient(circle, rgba(200, 153, 58, .14) 0%, transparent 70%); animation-delay: -5s; }
-    @keyframes bonsOrbFloat { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(28px, -20px) scale(1.04); } 66% { transform: translate(-22px, 24px) scale(.98); } }
-    .hero-layout { position: relative; z-index: 2; min-height: calc(100vh - 8rem); display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 3rem; }
-    .hero-content { max-width: 650px; padding: 4rem 0; }
-    .hero-eyebrow { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.7rem; }
-    .hero-eyebrow::before { content: ""; width: 2.2rem; height: 1px; background: var(--gold); flex-shrink: 0; }
-    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5.7rem); line-height: .95; font-weight: 900; margin-bottom: 1rem; }
-    .hero-title em { display: block; font-style: italic; color: var(--gold-lt); }
-    .hero-script { display: block; font-family: 'Satisfy', cursive; font-size: clamp(2rem, 3.4vw, 3rem); color: var(--gold); margin-bottom: 1.8rem; }
-    .hero-desc { max-width: 520px; font-size: 1.06rem; line-height: 1.9; color: rgba(245, 238, 216, .72); margin-bottom: 2.4rem; }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .hero-logo-wrap { display: flex; justify-content: center; align-items: center; position: relative; }
-    .hero-logo-wrap::before { content: ""; position: absolute; width: 460px; height: 460px; border-radius: 50%; border: 1px solid rgba(200, 153, 58, .10); box-shadow: 0 0 0 40px rgba(200, 153, 58, .04), 0 0 0 80px rgba(200, 153, 58, .025), 0 0 0 120px rgba(200, 153, 58, .01); }
-    .hero-main-logo { position: relative; z-index: 2; width: 100%; max-width: 380px; max-height: 380px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(200, 153, 58, .18)); animation: bonsLogoFloat 5.5s ease-in-out infinite; }
-    @keyframes bonsLogoFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
-    .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: .45rem; color: rgba(245, 238, 216, .3); font-size: .62rem; letter-spacing: .23em; text-transform: uppercase; }
-    .scroll-line { width: 1px; height: 2.8rem; background: linear-gradient(to bottom, var(--gold), transparent); animation: bonsScrollDrop 2s ease-in-out infinite; }
-    @keyframes bonsScrollDrop { 0% { transform: scaleY(0); transform-origin: top; opacity: 0; } 50% { transform: scaleY(1); transform-origin: top; opacity: 1; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; } }
-
-    .trust-bar {
-      background: linear-gradient(90deg, var(--forest), var(--moss), var(--forest));
-      border-top: 1px solid rgba(200, 153, 58, .15);
-      border-bottom: 1px solid rgba(200, 153, 58, .15);
-      padding: 1.6rem 0;
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
     }
-    .trust-inner { display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: .8rem; }
-    .trust-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--gold); line-height: 1; }
-    .trust-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: rgba(245, 238, 216, .55); line-height: 1.4; }
-    .trust-divider { width: 1px; height: 2.5rem; background: rgba(200, 153, 58, .18); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .eyebrow::before {
+      content: '';
+      width: 1.8rem;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
 
-    .social-strip { background: var(--moss); border-top: 1px solid rgba(200, 153, 58, .1); border-bottom: 1px solid rgba(200, 153, 58, .1); padding: 1rem 0; overflow: hidden; }
-    .strip-track { display: flex; align-items: center; gap: 3rem; width: max-content; animation: bonsMarquee 26s linear infinite; }
-    .strip-item { display: flex; align-items: center; gap: .65rem; white-space: nowrap; font-size: .72rem; text-transform: uppercase; letter-spacing: .22em; color: rgba(245, 238, 216, .54); }
-    .strip-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-    @keyframes bonsMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      padding: .9rem 1.8rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: var(--t);
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,.06);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .btn:hover::after { opacity: 1; }
 
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-media { position: relative; }
-    .about-card-main { aspect-ratio: 3/4; border-radius: 14px; background: linear-gradient(145deg, var(--moss), var(--forest)); border: 1px solid rgba(200, 153, 58, .16); position: relative; overflow: hidden; box-shadow: var(--shadow); }
-    .about-card-main::before { content: ""; position: absolute; inset: 1.2rem; border-radius: 10px; border: 1px solid rgba(200, 153, 58, .1); z-index: 2; pointer-events: none; }
-    .about-card-main img.about-main-img { position: absolute !important; top: 1.2rem !important; left: 1.2rem !important; width: calc(100% - 2.4rem) !important; height: calc(100% - 2.4rem) !important; object-fit: cover !important; border-radius: 10px !important; z-index: 1 !important; display: block !important; }
-    .about-badge-card { position: absolute; right: -1.4rem; bottom: -1.4rem; width: 9rem; height: 9rem; border-radius: 50%; background: var(--gold); color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(200, 153, 58, .34); z-index: 3; }
-    .about-badge-card strong { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; line-height: 1; }
-    .about-badge-card span { font-size: .58rem; line-height: 1.3; text-align: center; text-transform: uppercase; letter-spacing: .11em; }
-    .about-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.05; font-weight: 900; color: var(--gold-lt); margin: 1rem 0 1.2rem; }
-    .about-lead { font-size: 1rem; line-height: 1.9; color: rgba(245, 238, 216, .72); margin-bottom: 1.35rem; }
-    .about-lead strong { color: var(--gold-lt); font-weight: 500; }
-    .services-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
-    .service-chip { display: flex; align-items: center; gap: .75rem; padding: 1rem 1.1rem; border-radius: var(--radius); border: 1px solid rgba(200, 153, 58, .14); background: rgba(200, 153, 58, .04); transition: var(--transition); }
-    .service-chip:hover { transform: translateY(-3px); background: rgba(200, 153, 58, .08); border-color: rgba(200, 153, 58, .35); }
-    .chip-icon { font-size: 1.45rem; flex-shrink: 0; }
-    .chip-label { font-size: .84rem; line-height: 1.3; color: rgba(245, 238, 216, .82); }
-    .stats-row { display: flex; flex-wrap: wrap; gap: 2.2rem; margin-top: 2.2rem; padding-top: 2.2rem; border-top: 1px solid rgba(200, 153, 58, .1); }
-    .stat-num { display: block; font-family: 'Playfair Display', serif; font-size: 2.35rem; line-height: 1; font-weight: 900; color: var(--gold); }
-    .stat-lbl { display: block; margin-top: .35rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: rgba(245, 238, 216, .52); }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #a87c2a);
+      color: var(--black);
+      box-shadow: 0 6px 32px rgba(200,151,58,.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 48px rgba(200,151,58,.42);
+    }
+    .btn-outline {
+      border: 1px solid rgba(200,151,58,.35);
+      color: var(--gold-lt);
+      background: rgba(200,151,58,.04);
+      backdrop-filter: blur(10px);
+    }
+    .btn-outline:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-lt);
+      background: rgba(200,151,58,.1);
+    }
+    .btn-wa {
+      background: linear-gradient(135deg, #25D366, #1ebe5c);
+      color: #fff;
+      box-shadow: 0 6px 28px rgba(37,211,102,.25);
+    }
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 42px rgba(37,211,102,.36);
+    }
+    .btn-ghost {
+      color: rgba(244,237,218,.65);
+      border: 1px solid rgba(244,237,218,.15);
+    }
+    .btn-ghost:hover {
+      color: var(--cream);
+      border-color: rgba(244,237,218,.35);
+      background: rgba(244,237,218,.05);
+    }
 
-    #carta-de-drinks { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--ink) 0%, var(--forest) 40%, var(--ink) 100%); }
-    .menu-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem; margin-bottom: 3rem; }
-    .tab { padding: .62rem 1.35rem; border-radius: 999px; border: 1px solid rgba(200, 153, 58, .24); color: rgba(245, 238, 216, .58); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; transition: var(--transition); }
-    .tab.active, .tab:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.35rem; }
-    .drink-card { display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; background: rgba(22, 59, 39, .35); border: 1px solid rgba(200, 153, 58, .12); transition: var(--transition); box-shadow: 0 10px 30px rgba(0, 0, 0, .18); backdrop-filter: blur(6px); height: 100%; }
-    .drink-card:hover { transform: translateY(-6px); border-color: rgba(200, 153, 58, .36); box-shadow: 0 20px 60px rgba(0, 0, 0, .46), 0 0 40px rgba(200, 153, 58, .1); }
-    .drink-img { height: 200px; position: relative; overflow: hidden; border-bottom: 1px solid rgba(200, 153, 58, .12); background: linear-gradient(135deg, var(--moss), var(--fern)); }
-    .drink-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-    .drink-card:hover .drink-img img { transform: scale(1.08); }
-    .drink-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(11, 13, 11, .75) 100%); }
-    .drink-category-badge { position: absolute; top: 1rem; right: 1rem; z-index: 2; padding: .3rem .8rem; border-radius: 999px; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
-    .badge-diferencial { background: rgba(200, 153, 58, .9); color: var(--ink); }
-    .badge-evento { background: rgba(34, 89, 60, .88); color: var(--gold-lt); border: 1px solid rgba(200, 153, 58, .28); }
-    .drink-body { display: flex; flex-direction: column; flex: 1; padding: 1.45rem; }
-    .drink-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--gold-lt); margin-bottom: .45rem; }
-    .drink-desc { font-size: .86rem; line-height: 1.75; color: rgba(245, 238, 216, .6); margin-bottom: 1.15rem; flex: 1; }
-    .drink-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(200, 153, 58, .1); }
-    .drink-price { font-family: 'Playfair Display', serif; font-size: 1.28rem; color: var(--gold); }
-    .drink-order-btn { padding: .45rem .9rem; border-radius: var(--radius); border: 1px solid rgba(200, 153, 58, .28); color: var(--gold-lt); font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; transition: var(--transition); }
-    .drink-order-btn:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
-    .card-msg-subtext { margin-top: 3.2rem; margin-bottom: 1.4rem; text-align: center; color: rgba(245, 238, 216, .46); font-size: .86rem; }
+    /* =============================================
+       SECTION LAYOUT
+    ============================================= */
+    .sec { padding: 9rem 0; }
+    .sec-sm { padding: 5rem 0; }
+    .sec-header { margin-bottom: 5rem; }
+    .sec-header.center { text-align: center; }
+    .sec-title {
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      margin: 1rem 0 1.4rem;
+      color: var(--cream);
+    }
+    .sec-title span { color: var(--gold-lt); font-style: italic; }
+    .sec-desc {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--muted);
+      max-width: 560px;
+    }
+    .sec-header.center .sec-desc { margin: 0 auto; }
+    .gold-line {
+      display: block;
+      width: 4rem;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 1.2rem 0;
+    }
+    .gold-line.center {
+      width: 5rem;
+      margin: 1.2rem auto;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
 
-    .cta-banner { position: relative; overflow: hidden; text-align: center; padding: 7rem 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(34, 89, 60, .5) 0%, transparent 70%), var(--ink); }
-    .cta-script { font-family: 'Satisfy', cursive; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--gold); margin-bottom: .5rem; }
-    .cta-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 900; color: var(--gold-lt); max-width: 760px; margin: 0 auto 1.1rem; }
-    .cta-desc { max-width: 480px; margin: 0 auto 2.4rem; line-height: 1.8; color: rgba(245, 238, 216, .62); }
-    .cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    /* =============================================
+       LOADER
+    ============================================= */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+    #loader.out { opacity: 0; visibility: hidden; }
+    .loader-logo { width: 120px; animation: lPulse 1.6s ease-in-out infinite; }
+    .loader-bar {
+      width: 160px;
+      height: 1px;
+      background: rgba(200,151,58,.2);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .loader-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      border-radius: 999px;
+      animation: lBar 1.8s ease-in-out forwards;
+    }
+    @keyframes lPulse { 0%,100%{opacity:.8;transform:scale(1)} 50%{opacity:1;transform:scale(1.04)} }
+    @keyframes lBar { from{width:0} to{width:100%} }
 
-    .events-section { padding: 8rem 0; background: var(--forest); border-top: 1px solid rgba(200, 153, 58, .1); border-bottom: 1px solid rgba(200, 153, 58, .1); }
-    .events-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 4rem; }
-    .event-card { position: relative; overflow: hidden; padding: 2.35rem 1.6rem; text-align: center; border-radius: 14px; background: rgba(11, 13, 11, .5); border: 1px solid rgba(200, 153, 58, .12); transition: var(--transition); }
-    .event-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: var(--transition); }
-    .event-card:hover { transform: translateY(-6px); border-color: rgba(200, 153, 58, .32); background: rgba(22, 59, 39, .36); }
-    .event-card:hover::before { opacity: 1; }
-    .event-icon { display: block; font-size: 3rem; margin-bottom: 1rem; }
-    .event-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--gold-lt); margin-bottom: .55rem; }
-    .event-desc { font-size: .83rem; line-height: 1.75; color: rgba(245, 238, 216, .56); }
-
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-    .testimonial-card { padding: 1.8rem; border-radius: 14px; background: linear-gradient(180deg, rgba(22, 59, 39, .34), rgba(11, 13, 11, .5)); border: 1px solid rgba(200, 153, 58, .12); transition: var(--transition); }
-    .testimonial-card:hover { transform: translateY(-5px); border-color: rgba(200, 153, 58, .3); }
-    .stars { color: var(--gold); letter-spacing: .2em; margin-bottom: 1rem; font-size: .9rem; }
-    .testimonial-text { font-size: .95rem; line-height: 1.85; color: rgba(245, 238, 216, .7); margin-bottom: 1.4rem; font-style: italic; }
-    .testimonial-text::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); opacity: .3; line-height: 0; vertical-align: -1rem; margin-right: .2rem; }
-    .testimonial-author { display: flex; align-items: center; gap: 1rem; }
-    .testimonial-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(200, 153, 58, .3); flex-shrink: 0; background: var(--moss); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; overflow: hidden; }
-    .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .testimonial-name { display: block; font-weight: 700; color: var(--gold-lt); font-size: .9rem; }
-    .testimonial-role { display: block; margin-top: .2rem; font-size: .75rem; color: rgba(245, 238, 216, .5); }
-    .verified-badge { display: inline-flex; align-items: center; gap: .3rem; margin-top: .8rem; font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--wa); }
-    .verified-badge svg { width: 12px; height: 12px; }
-
-    #faq { background: var(--ink); }
-    .faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
-    .faq-item { background: rgba(22, 59, 39, .2); border: 1px solid rgba(200, 153, 58, .12); border-radius: var(--radius); overflow: hidden; transition: var(--transition); }
-    .faq-item:hover { border-color: rgba(200, 153, 58, .3); }
-    .faq-item summary { padding: 1.4rem; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--gold-lt); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--gold); transition: var(--transition); }
-    .faq-item[open] summary::after { content: '−'; }
-    .faq-item p { padding: 0 1.4rem 1.4rem; font-size: .9rem; line-height: 1.7; color: rgba(245, 238, 216, .7); }
-
-    #contato { padding: 8rem 0 5rem; background: var(--forest); border-top: 1px solid rgba(200, 153, 58, .1); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .contact-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3vw, 2.65rem); font-weight: 900; line-height: 1.1; color: var(--gold-lt); margin: 1rem 0 1.2rem; }
-    .contact-desc { font-size: 1rem; line-height: 1.9; color: rgba(245, 238, 216, .64); margin-bottom: 2rem; }
-    .contact-details { display: flex; flex-direction: column; gap: 1.1rem; }
-    .contact-row { display: flex; gap: 1rem; align-items: flex-start; }
-    .contact-icon { font-size: 1.2rem; line-height: 1; margin-top: .1rem; }
-    .contact-row-text strong { display: block; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: .2rem; }
-    .contact-row-text span { font-size: .92rem; line-height: 1.6; color: rgba(245, 238, 216, .72); }
-    .contact-wa-card { background: linear-gradient(135deg, rgba(37, 211, 102, .12), rgba(37, 211, 102, .04)); border: 1px solid rgba(37, 211, 102, .25); border-radius: 14px; padding: 2rem; box-shadow: 0 15px 40px rgba(0, 0, 0, .2); }
-    .wa-card-label { display: block; margin-bottom: .8rem; font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: #8cf2b2; }
-    .wa-card-text { font-size: .92rem; line-height: 1.7; color: rgba(245, 238, 216, .74); margin-bottom: 1.3rem; }
-    .wa-messages { display: flex; flex-direction: column; gap: .65rem; }
-    .wa-msg-btn { display: flex; align-items: center; gap: .8rem; padding: .92rem 1.1rem; border-radius: var(--radius); border: 1px solid rgba(245, 238, 216, .1); background: rgba(245, 238, 216, .04); color: rgba(245, 238, 216, .76); font-size: .84rem; transition: var(--transition); cursor: pointer; }
-    .wa-msg-btn:hover { transform: translateX(4px); background: rgba(37, 211, 102, .12); border-color: rgba(37, 211, 102, .35); color: #95f4b9; }
-    .wa-msg-btn svg { width: 16px; height: 16px; min-width: 16px; color: var(--wa); }
-
-    .urgency-bar {
-      background: linear-gradient(90deg, rgba(200,153,58,.12), rgba(200,153,58,.06), rgba(200,153,58,.12));
-      border: 1px solid rgba(200,153,58,.2);
-      border-radius: var(--radius);
-      padding: 1rem 1.4rem;
-      margin-bottom: 2rem;
+    /* =============================================
+       HEADER / NAV
+    ============================================= */
+    #hdr {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 500;
+      padding: 1.4rem 0;
+      transition: padding var(--t), background var(--t), backdrop-filter var(--t), border-color var(--t);
+      border-bottom: 1px solid transparent;
+    }
+    #hdr.stuck {
+      padding: .85rem 0;
+      background: rgba(8,10,8,.88);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-color: rgba(200,151,58,.1);
+    }
+    .nav-wrap {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .logo { display: flex; align-items: center; }
+    .logo img { max-height: 54px; width: auto; }
+
+    nav.desk-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+    }
+    nav.desk-nav a {
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(244,237,218,.62);
+      position: relative;
+      transition: color var(--t);
+    }
+    nav.desk-nav a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -.4rem;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width var(--t);
+    }
+    nav.desk-nav a:hover,
+    nav.desk-nav a.act { color: var(--gold-lt); }
+    nav.desk-nav a:hover::after,
+    nav.desk-nav a.act::after { width: 100%; }
+
+    .nav-cta { display: flex; align-items: center; gap: .8rem; }
+
+    /* hamburger */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: .4rem;
+      z-index: 600;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: var(--t);
+    }
+    .burger.open span:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
+    .burger.open span:nth-child(2){ opacity: 0; transform: translateX(-6px); }
+    .burger.open span:nth-child(3){ transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* mobile nav */
+    #mnav {
+      position: fixed;
+      inset: 0;
+      z-index: 490;
+      background: rgba(8,10,8,.97);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .45s cubic-bezier(.77,0,.175,1), opacity .45s, visibility .45s;
+    }
+    #mnav.open {
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    #mnav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: rgba(244,237,218,.82);
+      transition: color .3s;
+    }
+    #mnav a:hover { color: var(--gold-lt); }
+    #mnav .btn { margin-top: 1rem; font-family: 'Inter', sans-serif; font-size: .78rem; }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transform: scale(1.06);
+      animation: hZoom 20s ease-in-out infinite alternate;
+    }
+    @keyframes hZoom { from{transform:scale(1.06)} to{transform:scale(1.02)} }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(8,10,8,.92) 0%, rgba(8,10,8,.65) 55%, rgba(8,10,8,.3) 100%),
+        linear-gradient(to top, rgba(8,10,8,.8) 0%, transparent 50%);
+    }
+    .hero-noise {
+      position: absolute;
+      inset: 0;
+      opacity: .03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 10rem 0 6rem;
+      max-width: 760px;
+    }
+    .hero-script-tag {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--gold);
+      margin-bottom: .6rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp .8s ease .2s forwards;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 7.5rem);
+      font-weight: 700;
+      line-height: .96;
+      letter-spacing: -.02em;
+      color: var(--cream);
+      margin-bottom: 1.6rem;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp .9s ease .4s forwards;
+    }
+    .hero-h1 em {
+      display: block;
+      color: var(--gold-lt);
+      font-style: italic;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: rgba(244,237,218,.7);
+      max-width: 480px;
+      margin-bottom: 2.8rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp .9s ease .6s forwards;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp .9s ease .8s forwards;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      color: rgba(244,237,218,.3);
+      font-size: .6rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      animation: fadeUp 1s ease 1.2s both;
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 3.5rem;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollDrop 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollDrop {
+      0%{transform:scaleY(0);transform-origin:top;opacity:0}
+      45%{transform:scaleY(1);transform-origin:top;opacity:1}
+      55%{transform:scaleY(1);transform-origin:bottom}
+      100%{transform:scaleY(0);transform-origin:bottom;opacity:0}
+    }
+
+    /* floating stats on hero */
+    .hero-stats {
+      position: absolute;
+      right: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      opacity: 0;
+      animation: fadeRight .9s ease 1s forwards;
+    }
+    .hstat {
+      text-align: center;
+      padding: 1.4rem 1.6rem;
+      background: rgba(244,237,218,.04);
+      border: 1px solid rgba(200,151,58,.18);
+      border-radius: var(--r);
+      backdrop-filter: blur(16px);
+      min-width: 120px;
+      transition: var(--t);
+    }
+    .hstat:hover {
+      background: rgba(200,151,58,.08);
+      border-color: rgba(200,151,58,.35);
+      transform: translateY(-3px);
+    }
+    .hstat-n {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hstat-l {
+      display: block;
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .4rem;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateY(-50%) translateX(20px); }
+      to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    }
+
+    /* =============================================
+       MARQUEE STRIP
+    ============================================= */
+    .strip {
+      background: var(--moss);
+      border-top: 1px solid rgba(200,151,58,.12);
+      border-bottom: 1px solid rgba(200,151,58,.12);
+      padding: 1.1rem 0;
+      overflow: hidden;
+    }
+    .strip-track {
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .strip-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .7rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(244,237,218,.48);
+      white-space: nowrap;
+    }
+    .sdot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* =============================================
+       ABOUT
+    ============================================= */
+    #sobre { background: var(--deep); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .about-imgs {
+      position: relative;
+      height: 600px;
+    }
+    .aimg {
+      position: absolute;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid rgba(200,151,58,.14);
+      box-shadow: var(--sh);
+    }
+    .aimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .aimg-main {
+      width: 68%;
+      height: 78%;
+      top: 0;
+      left: 0;
+    }
+    .aimg-sub {
+      width: 52%;
+      height: 48%;
+      bottom: 0;
+      right: 0;
+      border: 2px solid rgba(200,151,58,.22);
+    }
+    .aimg-badge {
+      position: absolute;
+      top: 50%;
+      right: 24%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #a07023);
+      color: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 40px rgba(200,151,58,.4);
+      z-index: 5;
+    }
+    .aimg-badge strong { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+    .aimg-badge span { font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; text-align: center; line-height: 1.3; }
+
+    .about-chips {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin: 2rem 0;
+    }
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .9rem 1.1rem;
+      border-radius: var(--r);
+      border: 1px solid rgba(200,151,58,.12);
+      background: rgba(200,151,58,.04);
+      transition: var(--t);
+    }
+    .chip:hover { background: rgba(200,151,58,.09); border-color: rgba(200,151,58,.3); transform: translateY(-2px); }
+    .chip-ic { font-size: 1.3rem; }
+    .chip-tx { font-size: .84rem; color: rgba(244,237,218,.8); }
+
+    .about-stats {
+      display: flex;
+      gap: 2.4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(200,151,58,.1);
+      margin-top: .5rem;
+    }
+    .ast-n { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .ast-l { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: .35rem; }
+
+    /* =============================================
+       HOW IT WORKS
+    ============================================= */
+    #como-funciona {
+      background: linear-gradient(180deg, var(--black) 0%, var(--forest) 50%, var(--black) 100%);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: calc(12.5% + 1rem);
+      right: calc(12.5% + 1rem);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      z-index: 0;
+    }
+    .step {
+      text-align: center;
+      padding: 2.5rem 1.6rem 2rem;
+      border-radius: 14px;
+      background: rgba(20,43,26,.5);
+      border: 1px solid rgba(200,151,58,.1);
+      transition: var(--t);
+      position: relative;
+      z-index: 1;
+    }
+    .step:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,151,58,.3);
+      background: rgba(28,66,40,.45);
+      box-shadow: 0 20px 60px rgba(0,0,0,.3), 0 0 40px rgba(200,151,58,.07);
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #a07023);
+      color: var(--black);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+      box-shadow: 0 6px 24px rgba(200,151,58,.3);
+    }
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold-lt);
+      margin-bottom: .6rem;
+    }
+    .step-desc { font-size: .84rem; line-height: 1.7; color: var(--muted); }
+
+    /* =============================================
+       GALLERY / EVENTS (full-bleed mosaic)
+    ============================================= */
+    #galeria { background: var(--black); overflow: hidden; }
+    .gallery-mosaic {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 260px);
+      gap: .5rem;
+      margin-top: 4rem;
+    }
+    .gitem {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .gitem:hover img { transform: scale(1.08); }
+    .gitem-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,10,8,.75) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.2rem;
+    }
+    .gitem:hover .gitem-overlay { opacity: 1; }
+    .gitem-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    /* mosaic layout */
+    .gitem:nth-child(1)  { grid-column: span 5; grid-row: span 1; }
+    .gitem:nth-child(2)  { grid-column: span 3; grid-row: span 1; }
+    .gitem:nth-child(3)  { grid-column: span 4; grid-row: span 2; }
+    .gitem:nth-child(4)  { grid-column: span 4; grid-row: span 1; }
+    .gitem:nth-child(5)  { grid-column: span 4; grid-row: span 1; }
+
+    /* =============================================
+       SERVICES / DRINKS
+    ============================================= */
+    #servicos {
+      background: linear-gradient(180deg, var(--black) 0%, var(--forest) 100%);
+    }
+    .srv-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 3.5rem;
+    }
+    .stab {
+      padding: .6rem 1.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(200,151,58,.22);
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: var(--t);
+      cursor: pointer;
+    }
+    .stab.on, .stab:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
+
+    .srv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .scard {
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(20,43,26,.4);
+      border: 1px solid rgba(200,151,58,.1);
+      transition: var(--t);
+      backdrop-filter: blur(8px);
+    }
+    .scard:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,151,58,.3);
+      box-shadow: 0 24px 64px rgba(0,0,0,.4), 0 0 40px rgba(200,151,58,.08);
+    }
+    .scard-img {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+    .scard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .scard:hover .scard-img img { transform: scale(1.07); }
+    .scard-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(8,10,8,.7) 100%);
+    }
+    .sbadge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+      padding: .28rem .8rem;
+      border-radius: 999px;
+      font-size: .58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+    .sbadge-gold { background: rgba(200,151,58,.9); color: var(--black); }
+    .sbadge-green { background: rgba(28,66,40,.9); color: var(--gold-lt); border: 1px solid rgba(200,151,58,.25); }
+
+    .scard-body { display: flex; flex-direction: column; flex: 1; padding: 1.5rem; }
+    .scard-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold-lt);
+      margin-bottom: .5rem;
+    }
+    .scard-desc { font-size: .85rem; line-height: 1.75; color: var(--muted); flex: 1; margin-bottom: 1.2rem; }
+    .scard-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(200,151,58,.1);
       gap: .8rem;
     }
-    .urgency-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; animation: bonsPulse 1.5s ease-in-out infinite; }
-    .urgency-text { font-size: .84rem; color: rgba(245,238,216,.78); }
-    .urgency-text strong { color: var(--gold-lt); }
-
-    .instagram-section { padding: 5rem 0; background: var(--ink); text-align: center; }
-    .insta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; margin-top: 2.5rem; }
-    .insta-item { position: relative; aspect-ratio: 1; border-radius: 10px; overflow: hidden; display: block; }
-    .insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-    .insta-overlay { position: absolute; inset: 0; background: rgba(11, 13, 11, .65); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s ease; }
-    .insta-overlay-inner { text-align: center; color: var(--white); }
-    .insta-overlay-inner span { font-size: 1.8rem; display: block; }
-    .insta-overlay-inner p { font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; margin-top: .4rem; color: rgba(255,255,255,.7); }
-    .insta-item:hover img { transform: scale(1.06); }
-    .insta-item:hover .insta-overlay { opacity: 1; }
-    .insta-follow-cta { margin-top: 2rem; }
-
-    footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(200, 153, 58, .1);
-      padding: 2rem 0;
+    .scard-price { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold); }
+    .scard-cta {
+      padding: .45rem .95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(200,151,58,.28);
+      color: var(--gold-lt);
+      font-size: .64rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: var(--t);
     }
-    .footer-inner {
+    .scard-cta:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+    /* =============================================
+       CTA BANNER
+    ============================================= */
+    .cta-sec {
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 0;
+      text-align: center;
+    }
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(.35);
+    }
+    .cta-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(14,31,18,.7), rgba(8,10,8,.9));
+    }
+    .cta-inner { position: relative; z-index: 2; }
+    .cta-script { font-family: 'Great Vibes', cursive; font-size: clamp(2rem, 4vw, 3.2rem); color: var(--gold); margin-bottom: .4rem; }
+    .cta-h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; color: var(--cream); margin-bottom: 1rem; line-height: 1.05; }
+    .cta-desc { font-size: 1rem; color: rgba(244,237,218,.65); max-width: 480px; margin: 0 auto 2.4rem; line-height: 1.8; }
+    .cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+
+    /* =============================================
+       EVENT TYPES
+    ============================================= */
+    #eventos { background: var(--deep); }
+    .ev-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .evcard {
+      position: relative;
+      height: 340px;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .evcard img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .evcard:hover img { transform: scale(1.07); }
+    .evcard-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,10,8,.88) 0%, rgba(8,10,8,.3) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      transition: var(--t);
+    }
+    .evcard:hover .evcard-overlay { background: linear-gradient(to top, rgba(8,10,8,.94) 0%, rgba(8,10,8,.4) 70%, transparent 100%); }
+    .evcard-icon { font-size: 2.4rem; margin-bottom: .6rem; }
+    .evcard-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: var(--cream); margin-bottom: .4rem; }
+    .evcard-desc { font-size: .84rem; line-height: 1.65; color: rgba(244,237,218,.65); max-height: 0; overflow: hidden; transition: max-height .4s ease, opacity .4s ease; opacity: 0; }
+    .evcard:hover .evcard-desc { max-height: 100px; opacity: 1; }
+    .evcard-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin-top: .8rem;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s ease .1s, transform .3s ease .1s;
+    }
+    .evcard:hover .evcard-link { opacity: 1; transform: none; }
+    .evcard:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+    .evcard:nth-child(2) { grid-column: span 1; grid-row: span 1; }
+    .evcard:nth-child(3) { grid-column: span 2; grid-row: span 1; height: 280px; }
+
+    /* =============================================
+       TESTIMONIALS
+    ============================================= */
+    #depoimentos { background: var(--black); }
+    .tgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .tcard {
+      padding: 2rem;
+      border-radius: 16px;
+      background: linear-gradient(160deg, rgba(20,43,26,.4), rgba(8,10,8,.6));
+      border: 1px solid rgba(200,151,58,.1);
+      transition: var(--t);
+      position: relative;
+    }
+    .tcard::before {
+      content: '\201C';
+      position: absolute;
+      top: .5rem;
+      left: 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: .12;
+      line-height: 1;
+    }
+    .tcard:hover { transform: translateY(-5px); border-color: rgba(200,151,58,.28); }
+    .tstars { color: var(--gold); font-size: .9rem; letter-spacing: .2em; margin-bottom: 1rem; }
+    .ttext {
+      font-size: .93rem;
+      line-height: 1.85;
+      color: rgba(244,237,218,.7);
+      font-style: italic;
+      margin-bottom: 1.6rem;
+    }
+    .tauthor { display: flex; align-items: center; gap: .9rem; }
+    .tavatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--moss);
+      border: 2px solid rgba(200,151,58,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .tavatar img { width: 100%; height: 100%; object-fit: cover; }
+    .tname { display: block; font-weight: 600; font-size: .88rem; color: var(--gold-lt); }
+    .trole { display: block; font-size: .73rem; color: var(--muted); margin-top: .15rem; }
+    .tveri {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      margin-top: .8rem;
+      font-size: .62rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--wa);
+    }
+
+    /* =============================================
+       FAQ
+    ============================================= */
+    #faq { background: var(--deep); }
+    .faq-wrap { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: .85rem; }
+    .fitem {
+      background: rgba(20,43,26,.25);
+      border: 1px solid rgba(200,151,58,.1);
+      border-radius: var(--r);
+      overflow: hidden;
+      transition: border-color var(--t);
+    }
+    .fitem:hover { border-color: rgba(200,151,58,.28); }
+    .fitem summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-lt);
+      cursor: pointer;
+    }
+    .fitem summary::-webkit-details-marker { display: none; }
+    .fitem summary::after { content: '+'; font-size: 1.5rem; color: var(--gold); transition: transform var(--t); flex-shrink: 0; }
+    .fitem[open] summary::after { transform: rotate(45deg); }
+    .fitem p { padding: 0 1.5rem 1.5rem; font-size: .9rem; line-height: 1.75; color: rgba(244,237,218,.68); }
+
+    /* =============================================
+       CONTACT
+    ============================================= */
+    #contato { background: var(--forest); border-top: 1px solid rgba(200,151,58,.1); }
+    .cntgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .cnt-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--cream);
+      margin: 1rem 0 1.2rem;
+    }
+    .cnt-desc { font-size: 1rem; line-height: 1.85; color: var(--muted); margin-bottom: 2rem; }
+    .cnt-rows { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 2rem; }
+    .crow { display: flex; align-items: flex-start; gap: .9rem; }
+    .crow-ic { font-size: 1.2rem; line-height: 1; margin-top: .1rem; }
+    .crow-label { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: .2rem; }
+    .crow-val { font-size: .92rem; color: rgba(244,237,218,.72); line-height: 1.5; }
+
+    .wa-panel {
+      background: linear-gradient(135deg, rgba(37,211,102,.1), rgba(37,211,102,.04));
+      border: 1px solid rgba(37,211,102,.2);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .wa-panel-label { font-size: .65rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #8cf2b2; margin-bottom: .6rem; }
+    .wa-panel-desc { font-size: .9rem; line-height: 1.7; color: rgba(244,237,218,.72); margin-bottom: 1.2rem; }
+    .wa-msgs { display: flex; flex-direction: column; gap: .6rem; }
+    .wmsg {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .85rem 1rem;
+      border-radius: var(--r);
+      border: 1px solid rgba(244,237,218,.08);
+      background: rgba(244,237,218,.03);
+      font-size: .84rem;
+      color: rgba(244,237,218,.74);
+      transition: var(--t);
+      cursor: pointer;
+    }
+    .wmsg:hover { background: rgba(37,211,102,.1); border-color: rgba(37,211,102,.3); color: #95f4b9; transform: translateX(4px); }
+    .wmsg svg { width: 15px; height: 15px; min-width: 15px; color: var(--wa); }
+
+    /* urgency pulse */
+    .urgency {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .9rem 1.2rem;
+      border-radius: var(--r);
+      background: rgba(200,151,58,.08);
+      border: 1px solid rgba(200,151,58,.18);
+      margin-bottom: 1.8rem;
+    }
+    .urg-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; animation: pulse 1.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:.7} }
+    .urg-text { font-size: .84rem; color: rgba(244,237,218,.76); }
+    .urg-text strong { color: var(--gold-lt); }
+
+    /* =============================================
+       INSTAGRAM
+    ============================================= */
+    #instagram { background: var(--black); text-align: center; }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .6rem;
+      margin-top: 2.5rem;
+    }
+    .igitem {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      display: block;
+    }
+    .igitem img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .igitem:hover img { transform: scale(1.07); }
+    .ig-ov {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,10,8,.65);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .35s;
+    }
+    .ig-ov span { font-size: 1.6rem; display: block; margin-bottom: .3rem; }
+    .ig-ov p { font-size: .65rem; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.7); }
+    .igitem:hover .ig-ov { opacity: 1; }
+
+    /* =============================================
+       FLOAT WA
+    ============================================= */
+    .float-wa {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      z-index: 400;
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .9rem 1.2rem;
+      border-radius: 999px;
+      background: var(--wa);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 600;
+      box-shadow: 0 14px 40px rgba(37,211,102,.28);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .float-wa:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(37,211,102,.36); }
+    .float-wa svg { width: 18px; height: 18px; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--deep);
+      border-top: 1px solid rgba(200,151,58,.08);
+      padding: 2.2rem 0;
+    }
+    .ftr-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -332,119 +1178,109 @@
       gap: 1.2rem;
       margin-bottom: 1.4rem;
     }
-    .footer-brand {
+    .ftr-brand { display: flex; align-items: center; gap: 1rem; }
+    .ftr-brand img { max-height: 44px; }
+    .ftr-tag { font-size: .75rem; color: rgba(244,237,218,.38); max-width: 200px; line-height: 1.5; }
+    .ftr-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+    .ftr-links a { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(244,237,218,.42); transition: color var(--t); }
+    .ftr-links a:hover { color: var(--gold-lt); }
+    .ftr-socials { display: flex; gap: .5rem; }
+    .sic {
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(200,151,58,.2);
+      color: rgba(244,237,218,.5);
+      font-size: 1rem;
+      transition: var(--t);
     }
-    .footer-brand p { margin: 0; }
-    .footer-brand .logo img { max-height: 46px; }
-    .footer-tagline {
-      font-size: .78rem;
-      color: rgba(245, 238, 216, .42);
-      line-height: 1.5;
-      max-width: 220px;
-    }
-    .footer-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: .4rem 1.4rem;
-    }
-    .footer-links a {
-      font-size: .75rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: rgba(245, 238, 216, .46);
-      transition: var(--transition);
-    }
-    .footer-links a:hover { color: var(--gold-lt); }
-    .footer-social {
-      display: flex;
-      gap: .6rem;
-    }
-    .social-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid rgba(200, 153, 58, .22); color: rgba(245, 238, 216, .54); transition: var(--transition); }
-    .social-icon:hover { border-color: var(--gold); color: var(--gold-lt); background: rgba(200, 153, 58, .08); }
-    .footer-bottom {
-      border-top: 1px solid rgba(200, 153, 58, .08);
-      padding-top: 1.2rem;
+    .sic:hover { border-color: var(--gold); color: var(--gold-lt); background: rgba(200,151,58,.07); }
+    .ftr-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: .6rem;
+      gap: .5rem;
+      border-top: 1px solid rgba(200,151,58,.06);
+      padding-top: 1.2rem;
     }
-    .footer-bottom p { font-size: .68rem; color: rgba(245, 238, 216, .28); }
+    .ftr-bottom p { font-size: .65rem; color: rgba(244,237,218,.25); }
 
-    .ai-widget-section {
-      padding: 5rem 0;
-      background: linear-gradient(180deg, var(--ink) 0%, #040a07 100%);
-      border-top: 1px solid rgba(200,153,58,.1);
-      text-align: center;
-    }
-    .ai-widget-card {
-      max-width: 600px;
-      margin: 2.5rem auto 0;
-      background: linear-gradient(135deg, rgba(22,59,39,.4), rgba(11,13,11,.6));
-      border: 1px solid rgba(200,153,58,.2);
-      border-radius: 18px;
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .ai-widget-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .ai-pulse-ring {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin: 0 auto 1.2rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2rem;
-      position: relative;
-    }
-    .ai-pulse-ring::after {
-      content: "";
-      position: absolute;
-      inset: -8px;
-      border-radius: 50%;
-      border: 2px solid rgba(200,153,58,.3);
-      animation: bonsOrbFloat 2s ease-in-out infinite;
-    }
-    .ai-widget-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--gold-lt); margin-bottom: .6rem; }
-    .ai-widget-desc { font-size: .92rem; line-height: 1.8; color: rgba(245,238,216,.65); margin-bottom: 1.8rem; }
-    .ai-features { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.8rem; }
-    .ai-feature-tag { padding: .38rem .9rem; border-radius: 999px; border: 1px solid rgba(200,153,58,.22); color: rgba(245,238,216,.65); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+    /* =============================================
+       REVEAL ANIMATIONS
+    ============================================= */
+    .rv { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .rv-l { opacity: 0; transform: translateX(-28px); transition: opacity .8s ease, transform .8s ease; }
+    .rv-r { opacity: 0; transform: translateX(28px); transition: opacity .8s ease, transform .8s ease; }
+    .rv.in, .rv-l.in, .rv-r.in { opacity: 1; transform: none; }
 
-    .float-wa {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 260;
-      display: inline-flex;
-      align-items: center;
-      gap: .7rem;
-      padding: .95rem 1.1rem;
-      border-radius: 999px;
-      background: var(--wa);
-      color: #fff;
-      box-shadow: 0 16px 40px rgba(37, 211, 102, .28);
-      transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1100px) {
+      .hero-stats { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-imgs { height: 460px; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .steps::before { display: none; }
+      .tgrid { grid-template-columns: 1fr 1fr; }
+      .cntgrid { grid-template-columns: 1fr; gap: 3rem; }
+      .ftr-links { display: none; }
     }
-    .float-wa:hover {
-      background: var(--wa-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 18px 46px rgba(37, 211, 102, .34);
+
+    @media (max-width: 900px) {
+      .srv-grid { grid-template-columns: 1fr 1fr; }
+      .ev-grid { grid-template-columns: 1fr; }
+      .evcard:nth-child(3) { grid-column: span 1; }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gitem { grid-column: span 1 !important; grid-row: span 1 !important; height: 220px; }
     }
-    .float-wa svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      nav.desk-nav, .nav-cta { display: none; }
+      .burger { display: flex; }
+      .logo img { max-height: 46px; }
+
+      #hero { padding-top: 0; }
+      .hero-inner { padding: 9rem 0 5rem; }
+      .hero-h1 { font-size: clamp(3rem, 10vw, 5rem); }
+
+      .about-imgs { height: 360px; }
+      .srv-grid { grid-template-columns: 1fr; }
+      .tgrid { grid-template-columns: 1fr; }
+      .about-chips { grid-template-columns: 1fr; }
+      .about-stats { gap: 1.5rem; }
+
+      .sec { padding: 5rem 0; }
+      .sec-sm { padding: 3rem 0; }
+      .sec-header { margin-bottom: 3rem; }
+
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 300px; }
+
+      .float-wa span { display: none; }
+      .float-wa { padding: .9rem; border-radius: 50%; }
+
+      footer { padding: 1.6rem 0; }
+      .ftr-row { flex-direction: column; align-items: center; text-align: center; }
+      .ftr-brand { flex-direction: column; }
+      .ftr-bottom { flex-direction: column; align-items: center; }
+      .ftr-links { display: flex; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 1.2rem; }
+      .hero-h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .steps { grid-template-columns: 1fr; }
+      .gallery-mosaic { grid-template-columns: 1fr; }
+      .gitem { height: 200px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -452,864 +1288,867 @@
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
       }
     }
 
-    @keyframes bonsPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
-    @keyframes bonsCardIn { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: none; } }
-
-    @media (max-width: 1024px) {
-      .hero-layout { grid-template-columns: 1fr 1fr; gap: 2rem; }
-      .hero-main-logo { max-width: 340px; }
-      .menu-grid { grid-template-columns: repeat(2, 1fr); }
-      .events-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: 1fr 1fr; }
-      .insta-grid { grid-template-columns: repeat(2, 1fr); }
-      .trust-inner { gap: 2rem; }
-      .footer-links { display: none; }
-    }
-
-    @media (max-width: 768px) {
-      nav ul, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .logo img { max-height: 42px; }
-
-      #inicio { padding-top: 7rem; }
-      .hero-layout {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1.5rem;
-        min-height: auto;
-        padding: 1.5rem 0 3rem;
-      }
-      .hero-content { max-width: 100%; margin: 0 auto; }
-      .hero-desc { max-width: 100%; font-size: .96rem; }
-      .hero-ctas { justify-content: center; flex-direction: column; align-items: center; }
-      .hero-ctas .btn { width: 100%; max-width: 320px; justify-content: center; }
-      .hero-eyebrow { justify-content: center; }
-      .hero-main-logo { max-width: 180px; }
-      .hero-logo-wrap::before { width: 240px; height: 240px; }
-      .hero-logo-wrap { order: -1; }
-
-      .trust-inner { gap: 1.2rem; justify-content: space-around; }
-      .trust-divider { display: none; }
-      .trust-num { font-size: 1.35rem; }
-      .trust-label { font-size: .62rem; }
-
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .about-card-main { aspect-ratio: 4/3; }
-      .about-badge-card { right: -.8rem; bottom: -.8rem; width: 7.5rem; height: 7.5rem; }
-      .about-badge-card strong { font-size: 1.8rem; }
-      .services-list { grid-template-columns: 1fr; gap: .7rem; }
-      .service-chip { padding: .8rem 1rem; }
-      .stats-row { gap: 1.5rem; }
-
-      .menu-grid { grid-template-columns: 1fr; }
-      .menu-tabs { gap: .45rem; }
-      .tab { padding: .5rem 1rem; font-size: .68rem; }
-      .drink-img { height: 180px; }
-
-      .events-grid { grid-template-columns: 1fr 1fr; gap: .8rem; }
-      .event-card { padding: 1.6rem 1.1rem; }
-      .event-icon { font-size: 2.3rem; }
-      .event-name { font-size: .96rem; }
-
-      .testimonials-grid { grid-template-columns: 1fr; }
-
-      .faq-item summary { font-size: .96rem; padding: 1.1rem 1rem; }
-      .faq-item p { padding: 0 1rem 1.1rem; }
-
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .wa-msg-btn { font-size: .78rem; padding: .8rem .9rem; }
-      .contact-wa-card { padding: 1.5rem; }
-
-      .ai-widget-card { padding: 1.8rem 1.2rem; margin: 1.8rem auto 0; }
-      .ai-features { gap: .45rem; }
-      .ai-feature-tag { font-size: .65rem; padding: .32rem .75rem; }
-
-      .insta-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
-
-      .section-pad,
-      .events-section,
-      #contato,
-      .cta-banner,
-      .instagram-section { padding: 4rem 0; }
-      .section-header { margin-bottom: 2.5rem; }
-
-      .cta-btns { flex-direction: column; align-items: center; }
-      .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
-
-      .float-wa span { display: none; }
-      .float-wa { padding: 1rem; border-radius: 50%; }
-
-      footer { padding: 1.5rem 0; }
-      .footer-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-      .footer-brand { flex-direction: column; align-items: center; gap: .6rem; }
-      .footer-tagline { max-width: 100%; font-size: .72rem; }
-      .footer-links { justify-content: center; gap: .35rem 1rem; }
-      .footer-links { display: flex; }
-      .footer-links a { font-size: .68rem; }
-      .footer-bottom { flex-direction: column; text-align: center; gap: .4rem; padding-top: .9rem; }
-      .footer-bottom p { font-size: .64rem; }
-    }
-
-    @media (max-width: 480px) {
-      .container { padding: 0 16px; }
-      .hero-title { font-size: 2.4rem; }
-      .hero-script { font-size: 1.65rem; }
-      .hero-main-logo { max-width: 150px; }
-      .hero-logo-wrap::before { width: 200px; height: 200px; }
-      .section-title { font-size: 1.75rem; }
-      .events-grid { grid-template-columns: 1fr; }
-      .event-card { padding: 1.4rem 1rem; }
-      .trust-inner { gap: .8rem; }
-      .trust-item { flex-direction: column; text-align: center; gap: .3rem; }
-      .drink-footer { flex-direction: column; align-items: flex-start; gap: .6rem; }
-      .drink-order-btn { width: 100%; text-align: center; }
+    /* =============================================
+       MISC ICONS (WhatsApp inline SVG)
+    ============================================= */
+    .wa-ic {
+      width: 18px; height: 18px; flex-shrink: 0;
+      fill: currentColor;
     }
   </style>
 </head>
 <body>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-    <symbol id="bons-icon-wa" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </symbol>
-  </svg>
+<!-- WhatsApp SVG symbol -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="wa" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </symbol>
+</svg>
 
-  <div id="bonsLoader">
-    <img src="assets/logo-removebg-preview.png" alt="Carregando Bons Drinks">
-  </div>
+<!-- LOADER -->
+<div id="loader">
+  <img src="./Assets/logo.png" alt="Carregando Bons Drinks" class="loader-logo">
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
 
-  <header id="bonsHeader">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#inicio" class="logo" aria-label="Bons Drinks">
-          <img src="assets/logo-removebg-preview.png" alt="Bons Drinks" style="max-height:52px;">
-        </a>
-        <nav aria-label="Navegação principal">
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#carta-de-drinks">Eventos</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-        <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento." target="_blank" class="btn btn-gold nav-cta" rel="noopener noreferrer">
-          <svg width="16" height="16" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
+<!-- HEADER -->
+<header id="hdr">
+  <div class="container">
+    <div class="nav-wrap">
+      <a href="#inicio" class="logo" aria-label="Bons Drinks – Início">
+        <img src="./Assets/logo.png" alt="Bons Drinks">
+      </a>
+
+      <nav class="desk-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio" id="nl-inicio">Início</a></li>
+          <li><a href="#sobre" id="nl-sobre">Sobre</a></li>
+          <li><a href="#servicos" id="nl-servicos">Serviços</a></li>
+          <li><a href="#eventos" id="nl-eventos">Eventos</a></li>
+          <li><a href="#depoimentos" id="nl-depoimentos">Depoimentos</a></li>
+          <li><a href="#faq" id="nl-faq">FAQ</a></li>
+          <li><a href="#contato" id="nl-contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="nav-orcamento">
+          <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
           Orçamento Grátis
         </a>
-        <button class="hamburger" id="bonsHamburger" aria-label="Menu" aria-expanded="false" aria-controls="bonsMobileNav">
-          <span></span><span></span><span></span>
-        </button>
       </div>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav class="mobile-nav" id="bonsMobileNav" aria-label="Menu mobile">
-    <a href="#inicio" class="mobile-link">Início</a>
-    <a href="#sobre" class="mobile-link">Sobre</a>
-    <a href="#carta-de-drinks" class="mobile-link">Eventos</a>
-    <a href="#depoimentos" class="mobile-link">Depoimentos</a>
-    <a href="#faq" class="mobile-link">FAQ</a>
-    <a href="#contato" class="mobile-link">Contato</a>
-    <a href="https://wa.me/5555992275278" target="_blank" class="btn btn-wa mobile-link" rel="noopener noreferrer">
-      <svg width="16" height="16" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-      Fazer Orçamento
-    </a>
-  </nav>
-
-  <main>
-    <section id="inicio">
-      <div class="hero-bg"></div>
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="container">
-        <div class="hero-layout">
-          <div class="hero-content">
-            <div class="hero-eyebrow">
-              <span class="eyebrow">bons drinks open bar em eventos</span>
-            </div>
-            <h1 class="hero-title">
-              Drinks que<br>
-              <em>Transformam</em>
-            </h1>
-            <span class="hero-script">seu evento inesquecível</span>
-            <p class="hero-desc">
-              Coquetelaria artesanal e open bar com drinks para casamentos, formaturas, aniversários e eventos corporativos. Do planejamento ao brinde final — nós cuidamos de tudo.
-            </p>
-            <div class="hero-ctas">
-              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" class="btn btn-gold" rel="noopener noreferrer">
-                <svg width="16" height="16" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                Fazer Orçamento Grátis
-              </a>
-              <a href="#carta-de-drinks" class="btn btn-outline">Ver Nossos Eventos</a>
-            </div>
-          </div>
-          <div class="hero-logo-wrap">
-            <img src="assets/logo-removebg-preview.png" alt="Bons Drinks Open Bar Premium" class="hero-main-logo">
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span>Explorar</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <div class="trust-bar">
-      <div class="container">
-        <div class="trust-inner">
-          <div class="trust-item">
-            <span class="trust-num">200+</span>
-            <span class="trust-label">Eventos<br>Realizados</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-num">50+</span>
-            <span class="trust-label">Drinks<br>em Carta</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-num">100%</span>
-            <span class="trust-label">Satisfação<br>Garantida</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-num">⭐ 5.0</span>
-            <span class="trust-label">Avaliação<br>dos Clientes</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="social-strip" aria-hidden="true">
-      <div class="strip-track" id="bonsStripTrack"></div>
-    </div>
-
-    <section id="sobre" class="section-pad">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-media reveal-left">
-            <div class="about-card-main">
-              <img src="assets/DSC04211.jpg"
-                   alt="Barman Bons Drinks preparando cocktail premium em evento em Santa Maria RS"
-                   class="about-main-img"
-                   loading="lazy">
-            </div>
-            <div class="about-badge-card">
-              <strong>5+</strong>
-              <span>Anos<br>de Experiência</span>
-            </div>
-          </div>
-          <div class="reveal-right">
-            <span class="eyebrow">Quem somos</span>
-            <h2 class="about-title">Coquetelaria com alma, <em style="font-style:italic; color:var(--gold)">sabor</em> e história</h2>
-            <p class="about-lead">
-              Bons Drinks não é só um nome: nascemos do amor pela coquetelaria e pela arte de criar momentos. Em Santa Maria, RS, nos tornamos referência em <strong>open bar autêntico</strong> para quem quer que cada detalhe do evento seja perfeito.
-            </p>
-            <p class="about-lead">
-              Do clássico ao autoral, do alcoólico ao sem álcool — entregamos soluções completas de <strong>open bar</strong> para tornar cada celebração memorável e sofisticada.
-            </p>
-            <div class="services-list">
-              <div class="service-chip"><span class="chip-icon">💍</span><span class="chip-label">Casamentos &amp; Bodas</span></div>
-              <div class="service-chip"><span class="chip-icon">🎓</span><span class="chip-label">Formaturas</span></div>
-              <div class="service-chip"><span class="chip-icon">🎂</span><span class="chip-label">Aniversários</span></div>
-              <div class="service-chip"><span class="chip-icon">🏢</span><span class="chip-label">Eventos Corporativos</span></div>
-              <div class="service-chip"><span class="chip-icon">🍾</span><span class="chip-label">Open Bar Completo</span></div>
-              <div class="service-chip"><span class="chip-icon">🌿</span><span class="chip-label">Carta Sem Álcool</span></div>
-            </div>
-            <div class="stats-row">
-              <div class="stat"><span class="stat-num">200+</span><span class="stat-lbl">Eventos realizados</span></div>
-              <div class="stat"><span class="stat-num">50+</span><span class="stat-lbl">Drinks em carta</span></div>
-              <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Experiência premium</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="carta-de-drinks" class="section-pad">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Nossos Eventos</span>
-          <h2 class="section-title">Vitrine de Eventos</h2>
-          <div class="divider-center"></div>
-          <p class="section-desc">Momentos com Bons Drinks — cada evento é único.</p>
-        </div>
-        <div class="menu-tabs reveal">
-          <button class="tab active" data-filter="all">Todos</button>
-          <button class="tab" data-filter="diferenciais">Nossos Diferenciais</button>
-          <button class="tab" data-filter="eventos">Tipos de Eventos</button>
-        </div>
-        <div class="menu-grid" id="bonsMenuGrid">
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/DSC04249.jpg" alt="Experiência completa open bar em Santa Maria RS" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Experiência Completa</h3>
-              <p class="drink-desc">Do planejamento do menu até o brinde final, cuidamos de tudo. Entregamos uma estrutura de bar de alto nível, com insumos selecionados e equipe qualificada, garantindo o melhor custo-benefício para sua festa.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Falar com a equipe</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/WhatsApp-Image-2026-04-02-at-05.53.42.jpeg" alt="Open bar custo-benefício premium em Santa Maria RS" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Custo-Benefício Premium</h3>
-              <p class="drink-desc">Focamos em entregar a melhor experiência com um planejamento inteligente. Otimizamos o open bar para garantir alta qualidade, ótimos insumos e serviço impecável sem estourar o seu orçamento.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Falar com a equipe</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/DSC04139.jpg" alt="Carta exclusiva de drinks personalizada para eventos" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Carta Exclusiva</h3>
-              <p class="drink-desc">Desenvolvemos um menu sob medida para a sua celebração. Nossa equipe elabora uma carta de drinks que surpreende, atende ao perfil dos convidados e eleva o nível da sua festa.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Falar com a equipe</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/DSC04169-1.jpg" alt="Drinks personalizados e autorais para eventos especiais em Santa Maria" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Drinks Personalizados</h3>
-              <p class="drink-desc">Entendemos que cada evento é único. Criamos coquetéis que refletem a sua essência, com ingredientes, cores e nomes pensados perfeitamente para combinar com o tema da sua ocasião.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Falar com a equipe</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/follow40julienmr-8128.jpg" alt="Coquetelaria autoral e inovadora para festas premium" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Coquetelaria Autoral</h3>
-              <p class="drink-desc">Vamos além do convencional. Nossa marca registrada é criar drinks autorais inovadores, misturando técnicas modernas, frutas frescas e sabores inesquecíveis para surpreender todos os paladares.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Falar com a equipe</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="diferenciais">
-            <div class="drink-img">
-              <img src="assets/WhatsApp-Image-2026-04-02-at-05.17.49.jpeg" alt="Drinks sem álcool e mocktails premium" loading="lazy">
-              <span class="drink-category-badge badge-diferencial">Diferencial</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Carta Sem Álcool</h3>
-              <p class="drink-desc">Sabor, criatividade e sofisticação para todos os seus convidados. Nossa linha autêntica de Mocktails utiliza frutas frescas, xaropes artesanais e apresentações impecáveis, garantindo uma experiência deliciosa, complexa e inclusiva para quem não consome álcool.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20uma%20proposta%20com%20opções%20sem%20álcool." target="_blank" class="drink-order-btn" rel="noopener noreferrer">Solicitar proposta</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="eventos">
-            <div class="drink-img">
-              <img src="assets/DSC04255.jpg" alt="Open bar para casamentos inesquecíveis em Santa Maria RS" loading="lazy">
-              <span class="drink-category-badge badge-evento">Evento</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Casamentos Inesquecíveis</h3>
-              <p class="drink-desc">Transformamos o seu grande dia com um serviço de bar impecável. De welcome drinks elegantes a coquetéis exclusivos para os noivos, cuidamos de cada detalhe para celebrar o amor.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20drinks%20para%20o%20meu%20casamento%20💍" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Solicitar proposta</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="eventos">
-            <div class="drink-img">
-              <img src="assets/DSC04150.jpg" alt="Open bar para formaturas em Santa Maria RS" loading="lazy">
-              <span class="drink-category-badge badge-evento">Evento</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Formaturas Épicas</h3>
-              <p class="drink-desc">Celebre sua conquista com muita energia. Montamos estruturas de bar dinâmicas e servimos drinks vibrantes que garantem a diversão e mantêm a pista de dança animada até o fim da festa.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Solicitar proposta</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="drink-card reveal" data-cat="eventos">
-            <div class="drink-img">
-              <img src="assets/DSC04159.jpg" alt="Drinks para eventos corporativos em Santa Maria RS" loading="lazy">
-              <span class="drink-category-badge badge-evento">Evento</span>
-            </div>
-            <div class="drink-body">
-              <h3 class="drink-name">Eventos Corporativos</h3>
-              <p class="drink-desc">Profissionalismo, agilidade e sofisticação para a sua empresa. Incluímos opções clássicas e uma linha incrível de coquetéis sem álcool para atender com excelência a todos os colaboradores.</p>
-              <div class="drink-footer">
-                <span class="drink-price">Orçamento</span>
-                <a href="https://wa.me/5555992275278" target="_blank" class="drink-order-btn" rel="noopener noreferrer">Solicitar proposta</a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p class="card-msg-subtext reveal">Carta de drinks completa e personalizada de acordo com o seu evento</p>
-        <div style="text-align:center; margin-top:1rem;" class="reveal">
-          <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20ver%20o%20cardápio%20completo." target="_blank" class="btn btn-outline" rel="noopener noreferrer">Ver Carta Completa de Drinks</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner">
-      <div class="container">
-        <p class="cta-script reveal">Vamos celebrar?</p>
-        <h2 class="cta-title reveal">Seu evento merece<br>Bons Drinks</h2>
-        <p class="cta-desc reveal">Entre em contato agora e receba um orçamento personalizado. Atendemos Santa Maria-RS e região.</p>
-        <div class="cta-btns reveal">
-          <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" class="btn btn-gold" rel="noopener noreferrer">
-            <svg width="16" height="16" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-            Fazer Orçamento Agora
-          </a>
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" class="btn btn-outline" rel="noopener noreferrer">Ver no Instagram</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="eventos" class="events-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Onde Atuamos</span>
-          <h2 class="section-title">Para Todo Tipo de Evento</h2>
-          <div class="divider-center"></div>
-          <p class="section-desc">Cada celebração é única. Adaptamos nosso serviço para criar a experiência perfeita.</p>
-        </div>
-        <div class="events-grid">
-          <div class="event-card reveal">
-            <span class="event-icon">💍</span>
-            <h3 class="event-name">Casamentos</h3>
-            <p class="event-desc">Welcome drink, open bar completo e drinks exclusivos para os noivos. Elegância em cada detalhe.</p>
-          </div>
-          <div class="event-card reveal">
-            <span class="event-icon">🎓</span>
-            <h3 class="event-name">Formaturas</h3>
-            <p class="event-desc">Energia e diversão para celebrar sua conquista. Drinks para animar a festa até o amanhecer.</p>
-          </div>
-          <div class="event-card reveal">
-            <span class="event-icon">🎂</span>
-            <h3 class="event-name">Aniversários</h3>
-            <p class="event-desc">Do íntimo ao grandioso. Montamos o bar ideal para o tamanho e o estilo da sua festa.</p>
-          </div>
-          <div class="event-card reveal">
-            <span class="event-icon">🏢</span>
-            <h3 class="event-name">Corporativos</h3>
-            <p class="event-desc">Sofisticação e profissionalismo. Opções alcoólicas e não-alcoólicas para toda a equipe.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="depoimentos" class="section-pad" style="background: var(--ink);">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">O que dizem nossos clientes</span>
-          <h2 class="section-title">Quem viveu, aprovou</h2>
-          <div class="divider-center"></div>
-          <p class="section-desc">Depoimentos reais de clientes que confiaram na Bons Drinks para o seu grande momento.</p>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">Os drinks foram o charme da nossa festa! Cada convidado elogiou o sabor e a apresentação. A equipe foi super atenciosa e profissional do começo ao fim.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">👰</div>
-              <div>
-                <span class="testimonial-name">Ana & Lucas Ferreira</span>
-                <span class="testimonial-role">Casamento · Dez/2025 · Santa Maria, RS</span>
-              </div>
-            </div>
-            <div class="verified-badge">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Cliente verificado
-            </div>
-          </div>
-          <div class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">Contratamos para nossa formatura e superou todas as expectativas! Os drinks autorais fizeram sucesso absurdo. Já indiquei para todo mundo da turma.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">🎓</div>
-              <div>
-                <span class="testimonial-name">Mariana Costa</span>
-                <span class="testimonial-role">Formatura de Medicina · Nov/2025</span>
-              </div>
-            </div>
-            <div class="verified-badge">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Cliente verificado
-            </div>
-          </div>
-          <div class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">Profissionalismo impecável! Fizeram um drink personalizado com o nome da empresa que foi o hit do evento. Todos os colaboradores adoraram. Com certeza contrataremos de novo.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">🏢</div>
-              <div>
-                <span class="testimonial-name">Ricardo Almeida</span>
-                <span class="testimonial-role">Evento Corporativo · Out/2025</span>
-              </div>
-            </div>
-            <div class="verified-badge">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Cliente verificado
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ai-widget-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Atendimento Ágil</span>
-          <h2 class="section-title">Planejamento sem complicação</h2>
-          <div class="divider-center"></div>
-          <p class="section-desc">Nossa equipe responde rapidamente pelo WhatsApp, ajudando você a estruturar o open bar perfeito para o seu evento do início ao fim.</p>
-        </div>
-        <div class="ai-widget-card reveal">
-          <div class="ai-pulse-ring">💬</div>
-          <h3 class="ai-widget-title">Fale com nossa equipe</h3>
-          <p class="ai-widget-desc">Do cálculo das quantidades à escolha dos drinks ideais. Auxiliamos em cada etapa do processo para garantir que sua festa seja um sucesso absoluto.</p>
-          <div class="ai-features">
-            <span class="ai-feature-tag">⚡ Respostas Rápidas</span>
-            <span class="ai-feature-tag">📋 Planejamento Completo</span>
-            <span class="ai-feature-tag">🤝 Consultoria Personalizada</span>
-            <span class="ai-feature-tag">🍸 Carta sob Medida</span>
-          </div>
-          <a href="https://wa.me/5555992275278?text=Olá!%20Gostaria%20de%20ajuda%20para%20planejar%20os%20drinks%20do%20meu%20evento." target="_blank" class="btn btn-wa full-width-center" rel="noopener noreferrer">
-            <svg width="18" height="18" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-            Falar com a equipe no WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section-pad">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Tire suas dúvidas</span>
-          <h2 class="section-title">Perguntas Frequentes</h2>
-          <div class="divider-center"></div>
-        </div>
-        <div class="faq-grid">
-          <details class="faq-item reveal">
-            <summary>Como funciona o orçamento?</summary>
-            <p>É simples e grátis! Entre em contato pelo WhatsApp, nos conte sobre seu evento (tipo, data, número de convidados e local) e enviamos uma proposta personalizada em até 24 horas.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Vocês atendem fora de Santa Maria?</summary>
-            <p>Sim! Atendemos Santa Maria e toda a região central do RS. Para eventos em outras cidades, entre em contato e verificamos a disponibilidade conforme a distância.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Qual a antecedência mínima para contratar?</summary>
-            <p>Recomendamos contato com pelo menos 30 dias de antecedência. Para eventos grandes como casamentos, o ideal é fechar com 2 a 3 meses de antecipação para garantir a data.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Vocês fornecem toda a estrutura do bar?</summary>
-            <p>Sim! Levamos toda a estrutura: bar, utensílios, insumos, gelo e equipe treinada. Você não precisa se preocupar com nada além de curtir a festa.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Tem opção sem álcool na carta?</summary>
-            <p>Com certeza! Nossa carta inclui uma linha completa de drinks sem álcool, mocktails e sucos artesanais tão criativos quanto os coquetéis tradicionais.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Como é feito o pagamento?</summary>
-            <p>Trabalhamos com sinal na confirmação do contrato e o restante próximo à data do evento. Aceitamos Pix, transferência e cartão. Os detalhes são combinados na proposta.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" style="padding: 8rem 0 5rem; background: var(--forest); border-top: 1px solid rgba(200, 153, 58, .1);">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="reveal-left">
-            <span class="eyebrow">Vamos conversar</span>
-            <h2 class="contact-title">Pronto para criar um evento inesquecível?</h2>
-            <p class="contact-desc">Entre em contato pelo WhatsApp e vamos planejar juntos o open bar ideal para o seu momento especial.</p>
-            <div class="contact-details">
-              <div class="contact-row">
-                <span class="contact-icon">📱</span>
-                <div class="contact-row-text">
-                  <strong>WhatsApp</strong>
-                  <span>(55) 99227-5278</span>
-                </div>
-              </div>
-              <div class="contact-row">
-                <span class="contact-icon">📸</span>
-                <div class="contact-row-text">
-                  <strong>Instagram</strong>
-                  <span>@bonsdrinkssm</span>
-                </div>
-              </div>
-              <div class="contact-row">
-                <span class="contact-icon">📍</span>
-                <div class="contact-row-text">
-                  <strong>Localização</strong>
-                  <span>Santa Maria, RS e região</span>
-                </div>
-              </div>
-            </div>
-            <div style="margin-top: 2rem;">
-              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" class="btn btn-gold" rel="noopener noreferrer">
-                <svg width="16" height="16" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                Falar com a Equipe Agora
-              </a>
-            </div>
-          </div>
-
-          <div class="reveal-right">
-            <div class="contact-wa-card">
-              <span class="wa-card-label">💬 Mensagens Rápidas</span>
-              <p class="wa-card-text">Escolha uma opção e fale direto com nossa equipe:</p>
-              <div class="wa-messages">
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" class="wa-msg-btn" rel="noopener noreferrer">
-                  <svg aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                  Quero um orçamento para meu evento
-                </a>
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20ver%20o%20cardápio%20completo." target="_blank" class="wa-msg-btn" rel="noopener noreferrer">
-                  <svg aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                  Quero ver a carta de drinks completa
-                </a>
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20saber%20sobre%20o%20Open%20Bar." target="_blank" class="wa-msg-btn" rel="noopener noreferrer">
-                  <svg aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                  Quero saber sobre o Open Bar
-                </a>
-                <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20drinks%20para%20o%20meu%20casamento%20💍" target="_blank" class="wa-msg-btn" rel="noopener noreferrer">
-                  <svg aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                  Drinks para o meu casamento 💍
-                </a>
-              </div>
-            </div>
-            <div style="margin-top:1.4rem;">
-              <a href="https://wa.me/5555992275278" target="_blank" class="btn btn-wa full-width-center" rel="noopener noreferrer">
-                <svg width="18" height="18" aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-                Fazer Orçamento Agora
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="instagram-section">
-      <div class="container">
-        <div class="section-header reveal" style="margin-bottom: 0;">
-          <span class="eyebrow">Acompanhe nosso trabalho</span>
-          <h2 class="section-title">@bonsdrinkssm</h2>
-        </div>
-        <div class="insta-grid reveal">
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="insta-item">
-            <img src="assets/ed2.jpg" alt="Coquetelaria premium em evento de Santa Maria RS — Bons Drinks" loading="lazy">
-            <div class="insta-overlay"><div class="insta-overlay-inner"><span>❤️</span><p>Ver no Instagram</p></div></div>
-          </a>
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="insta-item">
-            <img src="assets/DSC04071.jpg" alt="Open bar premium para casamento — Bons Drinks Santa Maria" loading="lazy">
-            <div class="insta-overlay"><div class="insta-overlay-inner"><span>❤️</span><p>Ver no Instagram</p></div></div>
-          </a>
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="insta-item">
-            <img src="assets/WhatsApp-Image-2026-04-02-at-05.16.44.jpeg" alt="Drinks autorais em evento corporativo — Bons Drinks" loading="lazy">
-            <div class="insta-overlay"><div class="insta-overlay-inner"><span>❤️</span><p>Ver no Instagram</p></div></div>
-          </a>
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="insta-item">
-            <img src="assets/DSC03999.jpg" alt="Barman Bons Drinks preparando drink personalizado" loading="lazy">
-            <div class="insta-overlay"><div class="insta-overlay-inner"><span>❤️</span><p>Ver no Instagram</p></div></div>
-          </a>
-        </div>
-        <div class="insta-follow-cta reveal">
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            📸 Seguir no Instagram
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="#inicio" class="logo" aria-label="Bons Drinks">
-            <img src="assets/logo-removebg-preview.png" alt="Bons Drinks Logo" style="max-height:46px;">
-          </a>
-          <p class="footer-tagline">Coquetelaria premium em Santa Maria, RS e região.</p>
-        </div>
-        <nav class="footer-links" aria-label="Links do rodapé">
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#carta-de-drinks">Eventos</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram Bons Drinks">📸</a>
-          <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp Bons Drinks">💬</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Bons Drinks. Todos os direitos reservados.</p>
-        <p>Coquetelaria autêntica para eventos em Santa Maria, RS.</p>
-      </div>
-    </div>
-  </footer>
-
-  <a href="https://wa.me/5555992275278" target="_blank" class="float-wa" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
-    <svg aria-hidden="true"><use href="#bons-icon-wa"></use></svg>
-    <span>Fazer Orçamento</span>
+<!-- MOBILE NAV -->
+<nav id="mnav" aria-label="Menu mobile">
+  <a href="#inicio" class="mlink">Início</a>
+  <a href="#sobre" class="mlink">Sobre</a>
+  <a href="#servicos" class="mlink">Serviços</a>
+  <a href="#eventos" class="mlink">Eventos</a>
+  <a href="#depoimentos" class="mlink">Depoimentos</a>
+  <a href="#faq" class="mlink">FAQ</a>
+  <a href="#contato" class="mlink">Contato</a>
+  <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="btn btn-wa mlink">
+    <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+    Fazer Orçamento
   </a>
+</nav>
 
-  <script>
-    (function(){
-      function hideLoader() {
-        const loader = document.getElementById('bonsLoader');
-        if (loader) {
-          loader.style.opacity = '0';
-          setTimeout(function() { loader.style.display = 'none'; }, 500);
+<main>
+  <!-- ====== HERO ====== -->
+  <section id="inicio">
+    <div class="hero-bg">
+      <img src="./Assets/evento.jpg" alt="Bons Drinks – Open Bar Premium em Santa Maria RS" fetchpriority="high">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-noise"></div>
+
+    <div class="container">
+      <div class="hero-inner">
+        <p class="hero-script-tag">Coquetelaria Premium</p>
+        <h1 class="hero-h1">
+          Drinks que<br>
+          <em>Transformam</em>
+        </h1>
+        <p class="hero-sub">
+          Open bar artesanal para casamentos, formaturas, aniversários e eventos corporativos em Santa Maria, RS. Do planejamento ao brinde final — cuidamos de tudo.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="hero-orcamento">
+            <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+            Orçamento Grátis
+          </a>
+          <a href="#servicos" class="btn btn-ghost" id="hero-servicos">
+            Ver Serviços
+          </a>
+        </div>
+      </div>
+
+      <!-- floating stat cards -->
+      <div class="hero-stats" aria-hidden="true">
+        <div class="hstat">
+          <span class="hstat-n" data-count="200">0</span>
+          <span class="hstat-l">Eventos<br>Realizados</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n" data-count="50">0</span>
+          <span class="hstat-l">Drinks<br>em Carta</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n">⭐ 5.0</span>
+          <span class="hstat-l">Avaliação<br>dos Clientes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Explorar</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== MARQUEE STRIP ====== -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track" id="stripTrack"></div>
+  </div>
+
+  <!-- ====== SOBRE ====== -->
+  <section id="sobre" class="sec">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-imgs rv-l">
+          <div class="aimg aimg-main">
+            <img src="./Assets/barman.jpg" alt="Barman Bons Drinks preparando cocktail artesanal" loading="lazy">
+          </div>
+          <div class="aimg aimg-sub">
+            <img src="./Assets/coquetelaria.jpg" alt="Coquetelaria premium em evento" loading="lazy">
+          </div>
+          <div class="aimg-badge">
+            <strong>5+</strong>
+            <span>Anos de<br>Experiência</span>
+          </div>
+        </div>
+
+        <div class="rv-r">
+          <span class="eyebrow">Nossa História</span>
+          <h2 class="sec-title display" style="margin:1rem 0 1.2rem">Paixão por cada <span>drink</span> que servimos</h2>
+          <p style="font-size:1rem;line-height:1.9;color:var(--muted);margin-bottom:1rem">
+            Nascemos da paixão por transformar eventos em momentos inesquecíveis. Cada detalhe, do copo escolhido à garnish, é pensado para impressionar seus convidados.
+          </p>
+          <p style="font-size:1rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem">
+            Com mais de <strong style="color:var(--gold-lt)">200 eventos realizados</strong> em Santa Maria e região, nossa equipe de bartenders apaixonados cuida de tudo: estrutura, insumos, gelo e serviço de alto nível.
+          </p>
+
+          <div class="about-chips">
+            <div class="chip">
+              <span class="chip-ic">🍸</span>
+              <span class="chip-tx">Open Bar Completo</span>
+            </div>
+            <div class="chip">
+              <span class="chip-ic">🍹</span>
+              <span class="chip-tx">Drinks Personalizados</span>
+            </div>
+            <div class="chip">
+              <span class="chip-ic">🥂</span>
+              <span class="chip-tx">Mocktails Premium</span>
+            </div>
+            <div class="chip">
+              <span class="chip-ic">🎯</span>
+              <span class="chip-tx">Consultoria Completa</span>
+            </div>
+            <div class="chip">
+              <span class="chip-ic">🚚</span>
+              <span class="chip-tx">Estrutura Completa</span>
+            </div>
+            <div class="chip">
+              <span class="chip-ic">📍</span>
+              <span class="chip-tx">SM e Região</span>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div>
+              <span class="ast-n">200+</span>
+              <span class="ast-l">Eventos</span>
+            </div>
+            <div>
+              <span class="ast-n">50+</span>
+              <span class="ast-l">Drinks</span>
+            </div>
+            <div>
+              <span class="ast-n">100%</span>
+              <span class="ast-l">Satisfação</span>
+            </div>
+            <div>
+              <span class="ast-n">⭐ 5.0</span>
+              <span class="ast-l">Avaliação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== COMO FUNCIONA ====== -->
+  <section id="como-funciona" class="sec">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">Processo</span>
+        <h2 class="sec-title display">Como <span>funciona</span></h2>
+        <span class="gold-line center"></span>
+        <p class="sec-desc">Do primeiro contato ao último brinde, nossa equipe cuida de cada etapa com atenção e profissionalismo.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step rv">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Primeiro Contato</h3>
+          <p class="step-desc">Entre em contato pelo WhatsApp e conte sobre seu evento. Respondemos em até poucas horas.</p>
+        </div>
+        <div class="step rv">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Proposta Personalizada</h3>
+          <p class="step-desc">Enviamos uma proposta com carta de drinks sob medida e orçamento transparente para seu evento.</p>
+        </div>
+        <div class="step rv">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Confirmação e Planejamento</h3>
+          <p class="step-desc">Após aprovação, planejamos juntos cada detalhe: estrutura, cardápio, quantidade e logística.</p>
+        </div>
+        <div class="step rv">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Execução Impecável</h3>
+          <p class="step-desc">No dia do evento, nossa equipe chega antes para montar tudo. Você curte. Nós cuidamos do resto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GALERIA ====== -->
+  <section id="galeria" class="sec-sm">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">Nossa Galeria</span>
+        <h2 class="sec-title display">Momentos que <span>criamos</span></h2>
+        <span class="gold-line center"></span>
+      </div>
+    </div>
+    <div style="padding:0 2rem">
+      <div class="gallery-mosaic rv">
+        <div class="gitem">
+          <img src="./Assets/casamento.jpg" alt="Open bar em casamento – Bons Drinks Santa Maria RS" loading="lazy">
+          <div class="gitem-overlay"><span class="gitem-label">Casamentos</span></div>
+        </div>
+        <div class="gitem">
+          <img src="./Assets/corporativo.jpg" alt="Evento corporativo – Bons Drinks" loading="lazy">
+          <div class="gitem-overlay"><span class="gitem-label">Corporativo</span></div>
+        </div>
+        <div class="gitem">
+          <img src="./Assets/festa.jpg" alt="Festa premium – Bons Drinks open bar" loading="lazy">
+          <div class="gitem-overlay"><span class="gitem-label">Festas & Eventos</span></div>
+        </div>
+        <div class="gitem">
+          <img src="./Assets/formatura.jpg" alt="Open bar em formatura – Santa Maria RS" loading="lazy">
+          <div class="gitem-overlay"><span class="gitem-label">Formaturas</span></div>
+        </div>
+        <div class="gitem">
+          <img src="./Assets/coquetelaria.jpg" alt="Coquetelaria artesanal – Bons Drinks" loading="lazy">
+          <div class="gitem-overlay"><span class="gitem-label">Coquetelaria</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVIÇOS / DRINKS ====== -->
+  <section id="servicos" class="sec">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">O Que Oferecemos</span>
+        <h2 class="sec-title display">Nossos <span>Serviços</span></h2>
+        <span class="gold-line center"></span>
+        <p class="sec-desc">Carta completa de drinks e diferenciais para tornar seu evento inesquecível.</p>
+      </div>
+
+      <div class="srv-tabs">
+        <button class="stab on" data-filter="all" id="tab-all">Todos</button>
+        <button class="stab" data-filter="diferenciais" id="tab-dif">Diferenciais</button>
+        <button class="stab" data-filter="eventos" id="tab-ev">Por Evento</button>
+      </div>
+
+      <div class="srv-grid">
+
+        <article class="scard rv" data-cat="diferenciais">
+          <div class="scard-img">
+            <img src="./Assets/open-bar-premium.jpg" alt="Open bar premium em Santa Maria RS" loading="lazy">
+            <span class="sbadge sbadge-gold">Diferencial</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Open Bar Premium</h3>
+            <p class="scard-desc">Estrutura completa de bar com insumos de qualidade, equipe treinada e serviço impecável do início ao fim do evento.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="scard rv" data-cat="diferenciais">
+          <div class="scard-img">
+            <img src="./Assets/carta-drinks.jpg" alt="Carta exclusiva de drinks personalizada" loading="lazy">
+            <span class="sbadge sbadge-gold">Diferencial</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Carta Exclusiva</h3>
+            <p class="scard-desc">Desenvolvemos um menu sob medida para a sua celebração, com drinks que combinam com o tema e surpreendem cada convidado.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="scard rv" data-cat="diferenciais">
+          <div class="scard-img">
+            <img src="./Assets/mocktail.jpg" alt="Mocktails e drinks sem álcool premium" loading="lazy">
+            <span class="sbadge sbadge-gold">Diferencial</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Carta Sem Álcool</h3>
+            <p class="scard-desc">Sofisticação e criatividade para todos. Mocktails artesanais com frutas frescas e xaropes premium que impressionam.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278?text=Quero%20opções%20sem%20álcool!" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="scard rv" data-cat="eventos">
+          <div class="scard-img">
+            <img src="./Assets/casamento.jpg" alt="Open bar para casamentos inesquecíveis" loading="lazy">
+            <span class="sbadge sbadge-green">Evento</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Casamentos</h3>
+            <p class="scard-desc">Welcome drink elegante, open bar completo e coquetéis exclusivos para os noivos. Elegância em cada detalhe do seu grande dia.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278?text=Drinks%20para%20o%20meu%20casamento%20💍" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="scard rv" data-cat="eventos">
+          <div class="scard-img">
+            <img src="./Assets/formatura.jpg" alt="Open bar para formaturas em Santa Maria RS" loading="lazy">
+            <span class="sbadge sbadge-green">Evento</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Formaturas</h3>
+            <p class="scard-desc">Drinks vibrantes e energia de sobra para celebrar sua conquista. Montagens dinâmicas que mantêm a pista animada.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="scard rv" data-cat="eventos">
+          <div class="scard-img">
+            <img src="./Assets/corporativo.jpg" alt="Drinks para eventos corporativos em Santa Maria RS" loading="lazy">
+            <span class="sbadge sbadge-green">Evento</span>
+          </div>
+          <div class="scard-body">
+            <h3 class="scard-title">Corporativos</h3>
+            <p class="scard-desc">Profissionalismo e sofisticação para a sua empresa. Opções alcoólicas e não-alcoólicas com atendimento impecável.</p>
+            <div class="scard-foot">
+              <span class="scard-price">Orçamento</span>
+              <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="scard-cta">Consultar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p style="text-align:center;margin-top:3rem;color:var(--muted);font-size:.88rem" class="rv">Carta de drinks completa e personalizada de acordo com o seu evento</p>
+      <div style="text-align:center;margin-top:1.2rem" class="rv">
+        <a href="https://wa.me/5555992275278?text=Quero%20ver%20a%20carta%20completa." target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="ver-carta">Ver Carta Completa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA BANNER ====== -->
+  <div class="cta-sec">
+    <div class="cta-bg">
+      <img src="./Assets/foto-extra-1.jpg" alt="Bons Drinks em ação num evento premium" loading="lazy">
+    </div>
+    <div class="cta-inner container rv">
+      <p class="cta-script">Vamos celebrar?</p>
+      <h2 class="cta-h2 display">Seu evento merece<br><em style="color:var(--gold-lt)">Bons Drinks</em></h2>
+      <p class="cta-desc">Orçamento rápido, personalizado e grátis. Atendemos Santa Maria-RS e região.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="cta-orcamento">
+          <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+          Fazer Orçamento Agora
+        </a>
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="cta-instagram">
+          📸 Ver no Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TIPOS DE EVENTO ====== -->
+  <section id="eventos" class="sec">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">Onde Atuamos</span>
+        <h2 class="sec-title display">Para todo tipo de <span>evento</span></h2>
+        <span class="gold-line center"></span>
+        <p class="sec-desc">Cada celebração é única. Adaptamos nosso serviço para criar a experiência perfeita.</p>
+      </div>
+
+      <div class="ev-grid">
+        <div class="evcard rv">
+          <img src="./Assets/casamento.jpg" alt="Open bar para casamentos – Bons Drinks Santa Maria RS" loading="lazy">
+          <div class="evcard-overlay">
+            <span class="evcard-icon">💍</span>
+            <h3 class="evcard-title">Casamentos</h3>
+            <p class="evcard-desc">Welcome drink, open bar completo e drinks exclusivos. Elegância em cada detalhe do seu grande dia.</p>
+            <a href="https://wa.me/5555992275278?text=Drinks%20para%20o%20meu%20casamento!" class="evcard-link" target="_blank" rel="noopener noreferrer">Solicitar proposta →</a>
+          </div>
+        </div>
+
+        <div class="evcard rv">
+          <img src="./Assets/festa.jpg" alt="Open bar para festas e aniversários – Bons Drinks" loading="lazy">
+          <div class="evcard-overlay">
+            <span class="evcard-icon">🎂</span>
+            <h3 class="evcard-title">Festas & Aniversários</h3>
+            <p class="evcard-desc">Do íntimo ao grandioso. Drinks que combinam com o estilo e o tema da sua celebração.</p>
+            <a href="https://wa.me/5555992275278" class="evcard-link" target="_blank" rel="noopener noreferrer">Solicitar proposta →</a>
+          </div>
+        </div>
+
+        <div class="evcard rv">
+          <img src="./Assets/foto-extra-2.jpg" alt="Open bar para formaturas e corporativos – Bons Drinks" loading="lazy">
+          <div class="evcard-overlay">
+            <span class="evcard-icon">🎓</span>
+            <h3 class="evcard-title">Formaturas & Corporativos</h3>
+            <p class="evcard-desc">Energia e profissionalismo para celebrar conquistas. Opções para todos os perfis de convidados.</p>
+            <a href="https://wa.me/5555992275278" class="evcard-link" target="_blank" rel="noopener noreferrer">Solicitar proposta →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DEPOIMENTOS ====== -->
+  <section id="depoimentos" class="sec">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">O que dizem os clientes</span>
+        <h2 class="sec-title display">Quem viveu, <span>aprovou</span></h2>
+        <span class="gold-line center"></span>
+        <p class="sec-desc">Depoimentos reais de clientes que confiaram na Bons Drinks para o seu grande momento.</p>
+      </div>
+
+      <div class="tgrid">
+        <div class="tcard rv">
+          <div class="tstars">★★★★★</div>
+          <p class="ttext">Os drinks foram o charme da nossa festa! Cada convidado elogiou o sabor e a apresentação. A equipe foi super atenciosa e profissional do começo ao fim.</p>
+          <div class="tauthor">
+            <div class="tavatar">👰</div>
+            <div>
+              <span class="tname">Ana & Lucas Ferreira</span>
+              <span class="trole">Casamento · Dez/2025 · Santa Maria, RS</span>
+            </div>
+          </div>
+          <div class="tveri">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Cliente verificado
+          </div>
+        </div>
+
+        <div class="tcard rv">
+          <div class="tstars">★★★★★</div>
+          <p class="ttext">Contratamos para nossa formatura e superou todas as expectativas! Os drinks autorais fizeram sucesso absurdo. Já indiquei para todo mundo da turma.</p>
+          <div class="tauthor">
+            <div class="tavatar">🎓</div>
+            <div>
+              <span class="tname">Mariana Costa</span>
+              <span class="trole">Formatura de Medicina · Nov/2025</span>
+            </div>
+          </div>
+          <div class="tveri">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Cliente verificado
+          </div>
+        </div>
+
+        <div class="tcard rv">
+          <div class="tstars">★★★★★</div>
+          <p class="ttext">Profissionalismo impecável! Fizeram um drink personalizado com o nome da empresa que foi o hit do evento. Todos adoraram. Com certeza contrataremos de novo.</p>
+          <div class="tauthor">
+            <div class="tavatar">🏢</div>
+            <div>
+              <span class="tname">Ricardo Almeida</span>
+              <span class="trole">Evento Corporativo · Out/2025</span>
+            </div>
+          </div>
+          <div class="tveri">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Cliente verificado
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section id="faq" class="sec">
+    <div class="container">
+      <div class="sec-header center rv">
+        <span class="eyebrow">Tire suas dúvidas</span>
+        <h2 class="sec-title display">Perguntas <span>Frequentes</span></h2>
+        <span class="gold-line center"></span>
+      </div>
+      <div class="faq-wrap">
+        <details class="fitem rv">
+          <summary>Como funciona o orçamento?</summary>
+          <p>É simples e grátis! Entre em contato pelo WhatsApp, conte sobre seu evento (tipo, data, número de convidados e local) e enviamos uma proposta personalizada em até 24 horas.</p>
+        </details>
+        <details class="fitem rv">
+          <summary>Vocês atendem fora de Santa Maria?</summary>
+          <p>Sim! Atendemos Santa Maria e toda a região central do RS. Para eventos em outras cidades, entre em contato e verificamos disponibilidade conforme a distância.</p>
+        </details>
+        <details class="fitem rv">
+          <summary>Qual a antecedência mínima para contratar?</summary>
+          <p>Recomendamos contato com pelo menos 30 dias de antecedência. Para casamentos e eventos grandes, o ideal é fechar com 2 a 3 meses de antecipação para garantir a data.</p>
+        </details>
+        <details class="fitem rv">
+          <summary>Vocês fornecem toda a estrutura do bar?</summary>
+          <p>Sim! Levamos toda a estrutura: bar, utensílios, insumos, gelo e equipe treinada. Você não precisa se preocupar com nada além de curtir a festa.</p>
+        </details>
+        <details class="fitem rv">
+          <summary>Tem opção sem álcool na carta?</summary>
+          <p>Com certeza! Nossa carta inclui uma linha completa de drinks sem álcool, mocktails e sucos artesanais tão criativos quanto os coquetéis tradicionais.</p>
+        </details>
+        <details class="fitem rv">
+          <summary>Como é feito o pagamento?</summary>
+          <p>Trabalhamos com sinal na confirmação do contrato e o restante próximo à data do evento. Aceitamos Pix, transferência e cartão. Os detalhes são combinados na proposta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTATO ====== -->
+  <section id="contato" class="sec">
+    <div class="container">
+      <div class="cntgrid">
+        <div class="rv-l">
+          <span class="eyebrow">Vamos conversar</span>
+          <h2 class="cnt-title">Pronto para criar um evento inesquecível?</h2>
+          <p class="cnt-desc">Entre em contato pelo WhatsApp e vamos planejar juntos o open bar ideal para o seu momento especial.</p>
+
+          <div class="urgency">
+            <div class="urg-dot"></div>
+            <p class="urg-text"><strong>Agenda limitada</strong> — Reserve sua data com antecedência!</p>
+          </div>
+
+          <div class="cnt-rows">
+            <div class="crow">
+              <span class="crow-ic">📱</span>
+              <div>
+                <span class="crow-label">WhatsApp</span>
+                <span class="crow-val">(55) 99227-5278</span>
+              </div>
+            </div>
+            <div class="crow">
+              <span class="crow-ic">📸</span>
+              <div>
+                <span class="crow-label">Instagram</span>
+                <span class="crow-val">@bonsdrinkssm</span>
+              </div>
+            </div>
+            <div class="crow">
+              <span class="crow-ic">📍</span>
+              <div>
+                <span class="crow-label">Localização</span>
+                <span class="crow-val">Santa Maria, RS e região</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="contato-orcamento">
+            <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+            Falar com a Equipe Agora
+          </a>
+        </div>
+
+        <div class="rv-r">
+          <div class="wa-panel">
+            <p class="wa-panel-label">💬 Mensagens Rápidas</p>
+            <p class="wa-panel-desc">Escolha uma opção e fale direto com nossa equipe:</p>
+            <div class="wa-msgs">
+              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="wmsg" id="wmsg-1">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="wa-ic"><use href="#wa"></use></svg>
+                Quero um orçamento para meu evento
+              </a>
+              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20ver%20a%20carta%20de%20drinks%20completa." target="_blank" rel="noopener noreferrer" class="wmsg" id="wmsg-2">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="wa-ic"><use href="#wa"></use></svg>
+                Quero ver a carta de drinks completa
+              </a>
+              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20saber%20sobre%20o%20Open%20Bar." target="_blank" rel="noopener noreferrer" class="wmsg" id="wmsg-3">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="wa-ic"><use href="#wa"></use></svg>
+                Quero saber sobre o Open Bar
+              </a>
+              <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20drinks%20para%20o%20meu%20casamento%20💍" target="_blank" rel="noopener noreferrer" class="wmsg" id="wmsg-4">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="wa-ic"><use href="#wa"></use></svg>
+                Drinks para o meu casamento 💍
+              </a>
+            </div>
+          </div>
+          <div style="margin-top:1.2rem">
+            <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center;" id="contato-wa-btn">
+              <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+              Fazer Orçamento Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INSTAGRAM ====== -->
+  <section id="instagram" class="sec-sm">
+    <div class="container">
+      <div class="sec-header center rv" style="margin-bottom:0">
+        <span class="eyebrow">Acompanhe nosso trabalho</span>
+        <h2 class="sec-title display" style="margin:.6rem 0">@bonsdrinkssm</h2>
+      </div>
+      <div class="ig-grid rv">
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="igitem">
+          <img src="./Assets/coquetelaria.jpg" alt="Coquetelaria premium – Bons Drinks" loading="lazy">
+          <div class="ig-ov"><span>❤️</span><p>Ver no Instagram</p></div>
+        </a>
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="igitem">
+          <img src="./Assets/open-bar-premium.jpg" alt="Open bar premium – Bons Drinks" loading="lazy">
+          <div class="ig-ov"><span>❤️</span><p>Ver no Instagram</p></div>
+        </a>
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="igitem">
+          <img src="./Assets/foto-extra-3.jpg" alt="Drinks artesanais – Bons Drinks" loading="lazy">
+          <div class="ig-ov"><span>❤️</span><p>Ver no Instagram</p></div>
+        </a>
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="igitem">
+          <img src="./Assets/mocktail.jpg" alt="Mocktails premium – Bons Drinks" loading="lazy">
+          <div class="ig-ov"><span>❤️</span><p>Ver no Instagram</p></div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem" class="rv">
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="ig-seguir">
+          📸 Seguir no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ftr-row">
+      <div class="ftr-brand">
+        <a href="#inicio" aria-label="Bons Drinks">
+          <img src="./Assets/logo.png" alt="Bons Drinks Logo">
+        </a>
+        <p class="ftr-tag">Coquetelaria premium em Santa Maria, RS e região.</p>
+      </div>
+      <nav class="ftr-links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="ftr-socials">
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="sic" aria-label="Instagram Bons Drinks">📸</a>
+        <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="sic" aria-label="WhatsApp Bons Drinks">💬</a>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <p>© 2026 Bons Drinks. Todos os direitos reservados.</p>
+      <p>Coquetelaria autêntica para eventos em Santa Maria, RS.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT WA BUTTON -->
+<a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Fale conosco pelo WhatsApp" id="float-wa">
+  <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
+  <span>Orçamento</span>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- LOADER ---- */
+  function hideLoader() {
+    const l = document.getElementById('loader');
+    if (l) { l.classList.add('out'); setTimeout(() => l.remove(), 700); }
+  }
+  window.addEventListener('load', hideLoader);
+  setTimeout(hideLoader, 2500);
+
+  /* ---- HEADER STUCK ---- */
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    if (hdr) hdr.classList.toggle('stuck', window.scrollY > 50);
+  }, { passive: true });
+
+  /* ---- BURGER / MOBILE NAV ---- */
+  const burger = document.getElementById('burger');
+  const mnav   = document.getElementById('mnav');
+
+  function openMenu() {
+    burger.classList.add('open');
+    mnav.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('locked');
+  }
+  function closeMenu() {
+    burger.classList.remove('open');
+    mnav.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('locked');
+  }
+
+  if (burger && mnav) {
+    burger.addEventListener('click', () => burger.classList.contains('open') ? closeMenu() : openMenu());
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    mnav.querySelectorAll('.mlink').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  /* ---- SMOOTH SCROLL ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
+      const id = this.getAttribute('href');
+      if (id === '#') return;
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        closeMenu();
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 85;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---- ACTIVE NAV ---- */
+  const sections = ['inicio','sobre','servicos','eventos','depoimentos','faq','contato']
+    .map(id => document.getElementById(id)).filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('nav.desk-nav a').forEach(link => {
+            link.classList.toggle('act', link.getAttribute('href') === '#' + entry.target.id);
+          });
         }
-      }
-      window.addEventListener('load', hideLoader);
-      setTimeout(hideLoader, 2000);
-    })();
-
-    (function(){
-      'use strict';
-      const header = document.getElementById('bonsHeader');
-      const hamburger = document.getElementById('bonsHamburger');
-      const mobileNav = document.getElementById('bonsMobileNav');
-
-      window.addEventListener('scroll', function(){ if(header) header.classList.toggle('stuck', window.scrollY > 60); }, { passive: true });
-
-      function openMenu(){
-        if(!hamburger || !mobileNav) return;
-        hamburger.classList.add('open');
-        mobileNav.classList.add('open');
-        hamburger.setAttribute('aria-expanded','true');
-        document.body.classList.add('menu-open');
-      }
-      function closeMenu(){
-        if(!hamburger || !mobileNav) return;
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded','false');
-        document.body.classList.remove('menu-open');
-      }
-
-      if(hamburger && mobileNav){
-        hamburger.addEventListener('click', function(){ hamburger.classList.contains('open') ? closeMenu() : openMenu(); });
-        document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && mobileNav.classList.contains('open')) closeMenu(); });
-      }
-
-      const sectionLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
-      sectionLinks.forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            e.preventDefault();
-            closeMenu();
-            const headerOffset = 90;
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
       });
+    }, { threshold: 0.4 });
+    sections.forEach(s => obs.observe(s));
+  }
 
-      const observedSections = ['inicio','sobre','carta-de-drinks','depoimentos','faq','contato']
-        .map(function(id){ return document.getElementById(id); })
-        .filter(Boolean);
-
-      if ('IntersectionObserver' in window && observedSections.length) {
-        const navObserver = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if(entry.isIntersecting){
-              const id = '#' + entry.target.id;
-              document.querySelectorAll('nav a[href^="#"], .mobile-nav a[href^="#"]').forEach(function(link){
-                link.classList.toggle('active', link.getAttribute('href') === id);
-              });
-            }
-          });
-        }, { threshold: 0.45 });
-        observedSections.forEach(function(section){ navObserver.observe(section); });
+  /* ---- REVEAL ON SCROLL ---- */
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('in'), i * 60);
+        revObs.unobserve(entry.target);
       }
+    });
+  }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rv, .rv-l, .rv-r').forEach(el => revObs.observe(el));
 
-      const revealObserver = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry, i){
-          if(entry.isIntersecting){ setTimeout(function(){ entry.target.classList.add('in'); }, i * 70); revealObserver.unobserve(entry.target); }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el){ revealObserver.observe(el); });
-
-      const tabs = document.querySelectorAll('.tab');
-      const cards = document.querySelectorAll('.drink-card[data-cat]');
-      tabs.forEach(function(tab){
-        tab.addEventListener('click', function(){
-          tabs.forEach(function(t){ t.classList.remove('active'); });
-          tab.classList.add('active');
-          const filter = tab.getAttribute('data-filter');
-          let delay = 0;
-          cards.forEach(function(card){
-            const match = filter === 'all' || card.getAttribute('data-cat') === filter;
-            if(match){ card.style.display = 'flex'; card.style.animation = 'none'; void card.offsetWidth; card.style.animation = 'bonsCardIn .4s ease ' + delay + 'ms both'; delay += 40; }
-            else { card.style.display = 'none'; }
-          });
-        });
+  /* ---- SERVICE TABS ---- */
+  const tabs  = document.querySelectorAll('.stab');
+  const cards = document.querySelectorAll('.scard[data-cat]');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('on'));
+      tab.classList.add('on');
+      const filter = tab.getAttribute('data-filter');
+      let delay = 0;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.getAttribute('data-cat') === filter;
+        if (match) {
+          card.style.display = 'flex';
+          card.style.animation = 'none';
+          void card.offsetWidth;
+          card.style.animation = `fadeCardIn .4s ease ${delay}ms both`;
+          delay += 50;
+        } else {
+          card.style.display = 'none';
+        }
       });
+    });
+  });
 
-      const stripItems = ['Casamentos','Formaturas','Aniversários','Eventos Corporativos','Drinks Autorais','Coquetelaria autêntica','Santa Maria, RS','Open Bar'];
-      const track = document.getElementById('bonsStripTrack');
-      if(track){
-        const all = stripItems.concat(stripItems, stripItems, stripItems);
-        track.innerHTML = all.map(function(item){ return '<div class="strip-item"><span class="strip-dot"></span>' + item + '</div>'; }).join('');
-      }
-    })();
-  </script>
+  // Add keyframe dynamically
+  const style = document.createElement('style');
+  style.textContent = '@keyframes fadeCardIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}';
+  document.head.appendChild(style);
+
+  /* ---- MARQUEE STRIP ---- */
+  const items = ['Casamentos','Formaturas','Aniversários','Eventos Corporativos','Drinks Autorais','Coquetelaria Artesanal','Santa Maria, RS','Open Bar Premium','Mocktails'];
+  const track = document.getElementById('stripTrack');
+  if (track) {
+    const all = [...items, ...items, ...items, ...items];
+    track.innerHTML = all.map(t => `<div class="strip-item"><span class="sdot"></span>${t}</div>`).join('');
+  }
+
+  /* ---- COUNT UP ANIMATION ---- */
+  function countUp(el, target, suffix) {
+    let start = 0;
+    const dur = 1800;
+    const step = dur / target;
+    const timer = setInterval(() => {
+      start++;
+      el.textContent = start + suffix;
+      if (start >= target) { el.textContent = target + suffix; clearInterval(timer); }
+    }, step);
+  }
+
+  const cntEls = document.querySelectorAll('[data-count]');
+  if (cntEls.length) {
+    const cntObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const val = parseInt(el.getAttribute('data-count'));
+          const suffix = el.textContent.includes('+') ? '+' : '';
+          countUp(el, val, suffix || (val < 100 ? '+' : '+'));
+          cntObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    cntEls.forEach(el => cntObs.observe(el));
+  }
+
+})();
+</script>
 </body>
 </html>
