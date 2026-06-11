@@ -9,37 +9,13 @@
   <meta property="og:image" content="./Assets/evento.jpg">
   <title>Bons Drinks – Open Bar e Coquetelaria Premium | Santa Maria, RS</title>
   <meta name="theme-color" content="rgb(8,10,8)">
-
-  <script defer type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Bons Drinks",
-    "description": "Coquetelaria premium e open bar para eventos em Santa Maria, RS",
-    "url": "https://bonsdrinkssm.online",
-    "telephone": "+55-55-99227-5278",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santa Maria",
-      "addressRegion": "RS",
-      "addressCountry": "BR"
-    },
-    "sameAs": ["https://www.instagram.com/bonsdrinkssm/"],
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 09:00-22:00"
-  }
-  </script>
-
+  <script defer type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Bons Drinks","description":"Coquetelaria premium e open bar para eventos em Santa Maria, RS","url":"https://bonsdrinkssm.online","telephone":"+55-55-99227-5278","address":{"@type":"PostalAddress","addressLocality":"Santa Maria","addressRegion":"RS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/bonsdrinkssm/"],"priceRange":"$$","openingHours":"Mo-Su 09:00-22:00"}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
   <style>
-    /* =============================================
-       RESET & ROOT
-    ============================================= */
+    /* RESET & ROOT */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --black:    #080a08;
       --deep:     #0c0f0c;
@@ -59,308 +35,83 @@
       --t:        .38s cubic-bezier(.4,0,.2,1);
       --sh:       0 24px 72px rgba(0,0,0,.45);
     }
-
     html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-    body {
-      background: var(--black);
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
+    body { background: var(--black); color: var(--cream); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
     body.locked { overflow: hidden; }
-
     img, svg { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
     button { border: none; background: none; font: inherit; color: inherit; cursor: pointer; }
     ul { list-style: none; }
     section { width: 100%; scroll-margin-top: 90px; }
-
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--gold-lt);
-      outline-offset: 3px;
-      border-radius: 6px;
-    }
-
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-lt); outline-offset: 3px; border-radius: 6px; }
     .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
-    /* =============================================
-       TYPOGRAPHY
-    ============================================= */
-    .display {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      line-height: 1.0;
-      letter-spacing: -.01em;
-    }
-    .script {
-      font-family: 'Great Vibes', cursive;
-      font-weight: 400;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      font-size: .68rem;
-      font-weight: 600;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-    .eyebrow::before {
-      content: '';
-      width: 1.8rem;
-      height: 1px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
+    /* TYPOGRAPHY */
+    .display { font-family: 'Cormorant Garamond', serif; font-weight: 700; line-height: 1.0; letter-spacing: -.01em; }
+    .script { font-family: 'Great Vibes', cursive; font-weight: 400; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .6rem; font-size: .68rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+    .eyebrow::before { content: ''; width: 1.8rem; height: 1px; background: var(--gold); flex-shrink: 0; }
 
-    /* =============================================
-       BUTTONS
-    ============================================= */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .6rem;
-      padding: .9rem 1.8rem;
-      border-radius: 999px;
-      font-size: .78rem;
-      font-weight: 600;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      transition: var(--t);
-      white-space: nowrap;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,.06);
-      opacity: 0;
-      transition: opacity .3s;
-    }
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; padding: .9rem 1.8rem; border-radius: 999px; font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; transition: var(--t); white-space: nowrap; position: relative; overflow: hidden; }
+    .btn::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.06); opacity: 0; transition: opacity .3s; }
     .btn:hover::after { opacity: 1; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), #a87c2a); color: var(--black); box-shadow: 0 6px 32px rgba(200,151,58,.3); }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 48px rgba(200,151,58,.42); }
+    .btn-outline { border: 1px solid rgba(200,151,58,.35); color: var(--gold-lt); background: rgba(200,151,58,.04); backdrop-filter: blur(10px); }
+    .btn-outline:hover { transform: translateY(-2px); border-color: var(--gold-lt); background: rgba(200,151,58,.1); }
+    .btn-wa { background: linear-gradient(135deg, #25D366, #1ebe5c); color: #fff; box-shadow: 0 6px 28px rgba(37,211,102,.25); }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(37,211,102,.36); }
+    .btn-ghost { color: rgba(244,237,218,.65); border: 1px solid rgba(244,237,218,.15); }
+    .btn-ghost:hover { color: var(--cream); border-color: rgba(244,237,218,.35); background: rgba(244,237,218,.05); }
 
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold), #a87c2a);
-      color: var(--black);
-      box-shadow: 0 6px 32px rgba(200,151,58,.3);
-    }
-    .btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 48px rgba(200,151,58,.42);
-    }
-    .btn-outline {
-      border: 1px solid rgba(200,151,58,.35);
-      color: var(--gold-lt);
-      background: rgba(200,151,58,.04);
-      backdrop-filter: blur(10px);
-    }
-    .btn-outline:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold-lt);
-      background: rgba(200,151,58,.1);
-    }
-    .btn-wa {
-      background: linear-gradient(135deg, #25D366, #1ebe5c);
-      color: #fff;
-      box-shadow: 0 6px 28px rgba(37,211,102,.25);
-    }
-    .btn-wa:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 42px rgba(37,211,102,.36);
-    }
-    .btn-ghost {
-      color: rgba(244,237,218,.65);
-      border: 1px solid rgba(244,237,218,.15);
-    }
-    .btn-ghost:hover {
-      color: var(--cream);
-      border-color: rgba(244,237,218,.35);
-      background: rgba(244,237,218,.05);
-    }
-
-    /* =============================================
-       SECTION LAYOUT
-    ============================================= */
+    /* SECTION LAYOUT */
     .sec { padding: 9rem 0; }
     .sec-sm { padding: 5rem 0; }
     .sec-header { margin-bottom: 5rem; }
     .sec-header.center { text-align: center; }
-    .sec-title {
-      font-size: clamp(2.4rem, 4.5vw, 4rem);
-      margin: 1rem 0 1.4rem;
-      color: var(--cream);
-    }
+    .sec-title { font-size: clamp(2.4rem, 4.5vw, 4rem); margin: 1rem 0 1.4rem; color: var(--cream); }
     .sec-title span { color: var(--gold-lt); font-style: italic; }
-    .sec-desc {
-      font-size: 1rem;
-      line-height: 1.9;
-      color: var(--muted);
-      max-width: 560px;
-    }
+    .sec-desc { font-size: 1rem; line-height: 1.9; color: var(--muted); max-width: 560px; }
     .sec-header.center .sec-desc { margin: 0 auto; }
-    .gold-line {
-      display: block;
-      width: 4rem;
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin: 1.2rem 0;
-    }
-    .gold-line.center {
-      width: 5rem;
-      margin: 1.2rem auto;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
+    .gold-line { display: block; width: 4rem; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 1.2rem 0; }
+    .gold-line.center { width: 5rem; margin: 1.2rem auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 
-    /* =============================================
-       LOADER
-    ============================================= */
-    #loader {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: var(--black);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      transition: opacity .6s ease, visibility .6s ease;
-    }
+    /* LOADER */
+    #loader { position: fixed; inset: 0; z-index: 9999; background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transition: opacity .6s ease, visibility .6s ease; }
     #loader.out { opacity: 0; visibility: hidden; }
     .loader-logo { width: 120px; animation: lPulse 1.6s ease-in-out infinite; }
-    .loader-bar {
-      width: 160px;
-      height: 1px;
-      background: rgba(200,151,58,.2);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .loader-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
-      border-radius: 999px;
-      animation: lBar 1.8s ease-in-out forwards;
-    }
+    .loader-bar { width: 160px; height: 1px; background: rgba(200,151,58,.2); border-radius: 999px; overflow: hidden; }
+    .loader-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-lt)); border-radius: 999px; animation: lBar 1.8s ease-in-out forwards; }
     @keyframes lPulse { 0%,100%{opacity:.8;transform:scale(1)} 50%{opacity:1;transform:scale(1.04)} }
     @keyframes lBar { from{width:0} to{width:100%} }
 
-    /* =============================================
-       HEADER / NAV
-    ============================================= */
-    #hdr {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 500;
-      padding: 1.4rem 0;
-      transition: padding var(--t), background var(--t), backdrop-filter var(--t), border-color var(--t);
-      border-bottom: 1px solid transparent;
-    }
-    #hdr.stuck {
-      padding: .85rem 0;
-      background: rgba(8,10,8,.88);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-color: rgba(200,151,58,.1);
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
+    /* HEADER / NAV */
+    #hdr { position: fixed; top: 0; left: 0; width: 100%; z-index: 500; padding: 1.4rem 0; transition: padding var(--t), background var(--t), backdrop-filter var(--t), border-color var(--t); border-bottom: 1px solid transparent; }
+    #hdr.stuck { padding: .85rem 0; background: rgba(8,10,8,.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-color: rgba(200,151,58,.1); }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
     .logo { display: flex; align-items: center; }
     .logo img { max-height: 54px; width: auto; }
-
-    nav.desk-nav ul {
-      display: flex;
-      align-items: center;
-      gap: 2.4rem;
-    }
-    nav.desk-nav a {
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(244,237,218,.62);
-      position: relative;
-      transition: color var(--t);
-    }
-    nav.desk-nav a::after {
-      content: '';
-      position: absolute;
-      left: 0; bottom: -.4rem;
-      width: 0; height: 1px;
-      background: var(--gold);
-      transition: width var(--t);
-    }
-    nav.desk-nav a:hover,
-    nav.desk-nav a.act { color: var(--gold-lt); }
-    nav.desk-nav a:hover::after,
-    nav.desk-nav a.act::after { width: 100%; }
-
+    nav.desk-nav ul { display: flex; align-items: center; gap: 2.4rem; }
+    nav.desk-nav a { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(244,237,218,.62); position: relative; transition: color var(--t); }
+    nav.desk-nav a::after { content: ''; position: absolute; left: 0; bottom: -.4rem; width: 0; height: 1px; background: var(--gold); transition: width var(--t); }
+    nav.desk-nav a:hover, nav.desk-nav a.act { color: var(--gold-lt); }
+    nav.desk-nav a:hover::after, nav.desk-nav a.act::after { width: 100%; }
     .nav-cta { display: flex; align-items: center; gap: .8rem; }
-
-    /* hamburger */
-    .burger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      padding: .4rem;
-      z-index: 600;
-    }
-    .burger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--gold);
-      border-radius: 2px;
-      transition: var(--t);
-    }
+    .burger { display: none; flex-direction: column; gap: 5px; padding: .4rem; z-index: 600; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 2px; transition: var(--t); }
     .burger.open span:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
     .burger.open span:nth-child(2){ opacity: 0; transform: translateX(-6px); }
     .burger.open span:nth-child(3){ transform: rotate(-45deg) translate(5px,-5px); }
 
-    /* mobile nav */
-    #mnav {
-      position: fixed;
-      inset: 0;
-      z-index: 490;
-      background: rgba(8,10,8,.97);
-      backdrop-filter: blur(20px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.4rem;
-      transform: translateX(100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: transform .45s cubic-bezier(.77,0,.175,1), opacity .45s, visibility .45s;
-    }
-    #mnav.open {
-      transform: none;
-      opacity: 1;
-      visibility: visible;
-    }
-    #mnav a {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: rgba(244,237,218,.82);
-      transition: color .3s;
-    }
+    /* FIX 5: z-index do menu mobile corrigido para ficar acima do header (500) */
+    #mnav { position: fixed; inset: 0; z-index: 510; background: rgba(8,10,8,.97); backdrop-filter: blur(20px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.4rem; transform: translateX(100%); opacity: 0; visibility: hidden; transition: transform .45s cubic-bezier(.77,0,.175,1), opacity .45s, visibility .45s; }
+    #mnav.open { transform: none; opacity: 1; visibility: visible; }
+    #mnav a { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: rgba(244,237,218,.82); transition: color .3s; }
     #mnav a:hover { color: var(--gold-lt); }
     #mnav .btn { margin-top: 1rem; font-family: 'Inter', sans-serif; font-size: .78rem; }
 
-    /* =============================================
-       HERO
-    ============================================= */
+    /* HERO */
     #hero {
       position: relative;
       min-height: 100vh;
@@ -370,814 +121,213 @@
     }
     .hero-bg {
       position: absolute;
-      inset: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      min-height: 100vh;
       z-index: 0;
     }
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      transform: scale(1.06);
-      animation: hZoom 20s ease-in-out infinite alternate;
-    }
+    .hero-bg img { width: 100%; height: 100%; min-height: 100vh; object-fit: cover; object-position: center 30%; transform: scale(1.06); animation: hZoom 20s ease-in-out infinite alternate; }
     @keyframes hZoom { from{transform:scale(1.06)} to{transform:scale(1.02)} }
+    /* overlay cobre toda a área incluindo bordas do scale() */
     .hero-overlay {
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to right, rgba(8,10,8,.92) 0%, rgba(8,10,8,.65) 55%, rgba(8,10,8,.3) 100%),
-        linear-gradient(to top, rgba(8,10,8,.8) 0%, transparent 50%);
+      top: -5%; left: -5%; right: -5%; bottom: -5%;
+      background: linear-gradient(to right, rgba(8,10,8,.92) 0%, rgba(8,10,8,.65) 55%, rgba(8,10,8,.3) 100%), linear-gradient(to top, rgba(8,10,8,.8) 0%, transparent 50%);
+      z-index: 1;
     }
-    .hero-noise {
-      position: absolute;
-      inset: 0;
-      opacity: .03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      pointer-events: none;
-    }
+    .hero-noise { position: absolute; top: -5%; left: -5%; right: -5%; bottom: -5%; opacity: .03; z-index: 1; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; padding: 10rem 0 6rem; max-width: 760px; }
+    /* container do hero precisa de z-index para ficar acima do overlay */
+    #inicio > .container { position: relative; z-index: 2; }
+    .hero-script-tag { font-family: 'Great Vibes', cursive; font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--gold); margin-bottom: .6rem; opacity: 0; transform: translateY(20px); animation: fadeUp .8s ease .2s forwards; }
+    .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 8vw, 7.5rem); font-weight: 700; line-height: .96; letter-spacing: -.02em; color: var(--cream); margin-bottom: 1.6rem; opacity: 0; transform: translateY(24px); animation: fadeUp .9s ease .4s forwards; }
+    .hero-h1 em { display: block; color: var(--gold-lt); font-style: italic; }
+    .hero-sub { font-size: 1.05rem; line-height: 1.85; color: rgba(244,237,218,.7); max-width: 480px; margin-bottom: 2.8rem; opacity: 0; transform: translateY(20px); animation: fadeUp .9s ease .6s forwards; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; opacity: 0; transform: translateY(20px); animation: fadeUp .9s ease .8s forwards; }
+    .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: .5rem; color: rgba(244,237,218,.3); font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; animation: fadeUp 1s ease 1.2s both; }
+    .hero-scroll-line { width: 1px; height: 3.5rem; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollDrop 2.2s ease-in-out infinite; }
+    @keyframes scrollDrop { 0%{transform:scaleY(0);transform-origin:top;opacity:0} 45%{transform:scaleY(1);transform-origin:top;opacity:1} 55%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom;opacity:0} }
+    .hero-stats { position: absolute; right: 3rem; top: 50%; transform: translateY(-50%); z-index: 2; display: flex; flex-direction: column; gap: 1.4rem; opacity: 0; animation: fadeRight .9s ease 1s forwards; }
+    .hstat { text-align: center; padding: 1.4rem 1.6rem; background: rgba(244,237,218,.04); border: 1px solid rgba(200,151,58,.18); border-radius: var(--r); backdrop-filter: blur(16px); min-width: 120px; transition: var(--t); }
+    .hstat:hover { background: rgba(200,151,58,.08); border-color: rgba(200,151,58,.35); transform: translateY(-3px); }
+    .hstat-n { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .hstat-l { display: block; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-top: .4rem; }
+    @keyframes fadeUp { to { opacity: 1; transform: none; } }
+    @keyframes fadeRight { from { opacity: 0; transform: translateY(-50%) translateX(20px); } to { opacity: 1; transform: translateY(-50%) translateX(0); } }
 
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      padding: 10rem 0 6rem;
-      max-width: 760px;
-    }
-    .hero-script-tag {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      color: var(--gold);
-      margin-bottom: .6rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp .8s ease .2s forwards;
-    }
-    .hero-h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3.5rem, 8vw, 7.5rem);
-      font-weight: 700;
-      line-height: .96;
-      letter-spacing: -.02em;
-      color: var(--cream);
-      margin-bottom: 1.6rem;
-      opacity: 0;
-      transform: translateY(24px);
-      animation: fadeUp .9s ease .4s forwards;
-    }
-    .hero-h1 em {
-      display: block;
-      color: var(--gold-lt);
-      font-style: italic;
-    }
-    .hero-sub {
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: rgba(244,237,218,.7);
-      max-width: 480px;
-      margin-bottom: 2.8rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp .9s ease .6s forwards;
-    }
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp .9s ease .8s forwards;
-    }
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .5rem;
-      color: rgba(244,237,218,.3);
-      font-size: .6rem;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      animation: fadeUp 1s ease 1.2s both;
-    }
-    .hero-scroll-line {
-      width: 1px;
-      height: 3.5rem;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      animation: scrollDrop 2.2s ease-in-out infinite;
-    }
-    @keyframes scrollDrop {
-      0%{transform:scaleY(0);transform-origin:top;opacity:0}
-      45%{transform:scaleY(1);transform-origin:top;opacity:1}
-      55%{transform:scaleY(1);transform-origin:bottom}
-      100%{transform:scaleY(0);transform-origin:bottom;opacity:0}
-    }
-
-    /* floating stats on hero */
-    .hero-stats {
-      position: absolute;
-      right: 3rem;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-      opacity: 0;
-      animation: fadeRight .9s ease 1s forwards;
-    }
-    .hstat {
-      text-align: center;
-      padding: 1.4rem 1.6rem;
-      background: rgba(244,237,218,.04);
-      border: 1px solid rgba(200,151,58,.18);
-      border-radius: var(--r);
-      backdrop-filter: blur(16px);
-      min-width: 120px;
-      transition: var(--t);
-    }
-    .hstat:hover {
-      background: rgba(200,151,58,.08);
-      border-color: rgba(200,151,58,.35);
-      transform: translateY(-3px);
-    }
-    .hstat-n {
-      display: block;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .hstat-l {
-      display: block;
-      font-size: .65rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: .4rem;
-    }
-
-    @keyframes fadeUp {
-      to { opacity: 1; transform: none; }
-    }
-    @keyframes fadeRight {
-      from { opacity: 0; transform: translateY(-50%) translateX(20px); }
-      to { opacity: 1; transform: translateY(-50%) translateX(0); }
-    }
-
-    /* =============================================
-       MARQUEE STRIP
-    ============================================= */
-    .strip {
-      background: var(--moss);
-      border-top: 1px solid rgba(200,151,58,.12);
-      border-bottom: 1px solid rgba(200,151,58,.12);
-      padding: 1.1rem 0;
-      overflow: hidden;
-    }
-    .strip-track {
-      display: flex;
-      align-items: center;
-      gap: 2.8rem;
-      width: max-content;
-      animation: marquee 28s linear infinite;
-    }
-    .strip-item {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      font-size: .7rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: rgba(244,237,218,.48);
-      white-space: nowrap;
-    }
+    /* MARQUEE STRIP */
+    .strip { background: var(--moss); border-top: 1px solid rgba(200,151,58,.12); border-bottom: 1px solid rgba(200,151,58,.12); padding: 1.1rem 0; overflow: hidden; }
+    .strip-track { display: flex; align-items: center; gap: 2.8rem; width: max-content; animation: marquee 28s linear infinite; }
+    .strip-item { display: flex; align-items: center; gap: .6rem; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(244,237,218,.48); white-space: nowrap; }
     .sdot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
     @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-    /* =============================================
-       ABOUT
-    ============================================= */
+    /* ABOUT */
     #sobre { background: var(--deep); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-    .about-imgs {
-      position: relative;
-      height: 600px;
-    }
-    .aimg {
-      position: absolute;
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(200,151,58,.14);
-      box-shadow: var(--sh);
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-imgs { position: relative; height: 600px; }
+    .aimg { position: absolute; border-radius: var(--r); overflow: hidden; border: 1px solid rgba(200,151,58,.14); box-shadow: var(--sh); }
     .aimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .aimg-main {
-      width: 68%;
-      height: 78%;
-      top: 0;
-      left: 0;
-    }
-    .aimg-sub {
-      width: 52%;
-      height: 48%;
-      bottom: 0;
-      right: 0;
-      border: 2px solid rgba(200,151,58,.22);
-    }
-    .aimg-badge {
-      position: absolute;
-      top: 50%;
-      right: 24%;
-      transform: translateY(-50%);
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), #a07023);
-      color: var(--black);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 40px rgba(200,151,58,.4);
-      z-index: 5;
-    }
+    .aimg-main { width: 68%; height: 78%; top: 0; left: 0; }
+    .aimg-sub { width: 52%; height: 48%; bottom: 0; right: 0; border: 2px solid rgba(200,151,58,.22); }
+    .aimg-badge { position: absolute; top: 50%; right: 24%; transform: translateY(-50%); width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #a07023); color: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(200,151,58,.4); z-index: 5; }
     .aimg-badge strong { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; }
     .aimg-badge span { font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; text-align: center; line-height: 1.3; }
-
-    .about-chips {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .75rem;
-      margin: 2rem 0;
-    }
-    .chip {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      padding: .9rem 1.1rem;
-      border-radius: var(--r);
-      border: 1px solid rgba(200,151,58,.12);
-      background: rgba(200,151,58,.04);
-      transition: var(--t);
-    }
+    .about-chips { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 2rem 0; }
+    .chip { display: flex; align-items: center; gap: .75rem; padding: .9rem 1.1rem; border-radius: var(--r); border: 1px solid rgba(200,151,58,.12); background: rgba(200,151,58,.04); transition: var(--t); }
     .chip:hover { background: rgba(200,151,58,.09); border-color: rgba(200,151,58,.3); transform: translateY(-2px); }
     .chip-ic { font-size: 1.3rem; }
     .chip-tx { font-size: .84rem; color: rgba(244,237,218,.8); }
-
-    .about-stats {
-      display: flex;
-      gap: 2.4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(200,151,58,.1);
-      margin-top: .5rem;
-    }
+    .about-stats { display: flex; gap: 2.4rem; padding-top: 2rem; border-top: 1px solid rgba(200,151,58,.1); margin-top: .5rem; }
     .ast-n { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; color: var(--gold); line-height: 1; }
     .ast-l { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: .35rem; }
 
-    /* =============================================
-       HOW IT WORKS
-    ============================================= */
-    #como-funciona {
-      background: linear-gradient(180deg, var(--black) 0%, var(--forest) 50%, var(--black) 100%);
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      position: relative;
-    }
-    .steps::before {
-      content: '';
-      position: absolute;
-      top: 2.5rem;
-      left: calc(12.5% + 1rem);
-      right: calc(12.5% + 1rem);
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      z-index: 0;
-    }
-    .step {
-      text-align: center;
-      padding: 2.5rem 1.6rem 2rem;
-      border-radius: 14px;
-      background: rgba(20,43,26,.5);
-      border: 1px solid rgba(200,151,58,.1);
-      transition: var(--t);
-      position: relative;
-      z-index: 1;
-    }
-    .step:hover {
-      transform: translateY(-6px);
-      border-color: rgba(200,151,58,.3);
-      background: rgba(28,66,40,.45);
-      box-shadow: 0 20px 60px rgba(0,0,0,.3), 0 0 40px rgba(200,151,58,.07);
-    }
-    .step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), #a07023);
-      color: var(--black);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1.4rem;
-      box-shadow: 0 6px 24px rgba(200,151,58,.3);
-    }
-    .step-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--gold-lt);
-      margin-bottom: .6rem;
-    }
+    /* HOW IT WORKS */
+    #como-funciona { background: linear-gradient(180deg, var(--black) 0%, var(--forest) 50%, var(--black) 100%); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; position: relative; }
+    /* FIX: linha conectora no topo dos cards, acima deles com z-index:2 */
+    .steps::before { content: ''; position: absolute; top: 0; left: calc(12.5% + 1rem); right: calc(12.5% + 1rem); height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); z-index: 2; border-radius: 2px; }
+    .step { text-align: center; padding: 2.5rem 1.6rem 2rem; border-radius: 14px; background: rgba(20,43,26,.5); border: 1px solid rgba(200,151,58,.1); transition: var(--t); position: relative; z-index: 1; }
+    .step:hover { transform: translateY(-6px); border-color: rgba(200,151,58,.3); background: rgba(28,66,40,.45); box-shadow: 0 20px 60px rgba(0,0,0,.3), 0 0 40px rgba(200,151,58,.07); }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #a07023); color: var(--black); font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 1.4rem; box-shadow: 0 6px 24px rgba(200,151,58,.3); }
+    .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--gold-lt); margin-bottom: .6rem; }
     .step-desc { font-size: .84rem; line-height: 1.7; color: var(--muted); }
 
-    /* =============================================
-       GALLERY / EVENTS (full-bleed mosaic)
-    ============================================= */
+    /* GALLERY */
     #galeria { background: var(--black); overflow: hidden; }
-    .gallery-mosaic {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(2, 260px);
-      gap: .5rem;
-      margin-top: 4rem;
-    }
-    .gitem {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+    .gallery-mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(2, 260px); gap: .5rem; margin-top: 4rem; }
+    .gitem { position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; }
     .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
     .gitem:hover img { transform: scale(1.08); }
-    .gitem-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(8,10,8,.75) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity .4s ease;
-      display: flex;
-      align-items: flex-end;
-      padding: 1.2rem;
-    }
+    .gitem-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,10,8,.75) 0%, transparent 60%); opacity: 0; transition: opacity .4s ease; display: flex; align-items: flex-end; padding: 1.2rem; }
     .gitem:hover .gitem-overlay { opacity: 1; }
-    .gitem-label {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--cream);
-    }
-    /* mosaic layout */
+    .gitem-label { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--cream); }
     .gitem:nth-child(1)  { grid-column: span 5; grid-row: span 1; }
     .gitem:nth-child(2)  { grid-column: span 3; grid-row: span 1; }
     .gitem:nth-child(3)  { grid-column: span 4; grid-row: span 2; }
     .gitem:nth-child(4)  { grid-column: span 4; grid-row: span 1; }
     .gitem:nth-child(5)  { grid-column: span 4; grid-row: span 1; }
 
-    /* =============================================
-       SERVICES / DRINKS
-    ============================================= */
-    #servicos {
-      background: linear-gradient(180deg, var(--black) 0%, var(--forest) 100%);
-    }
-    .srv-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: .5rem;
-      margin-bottom: 3.5rem;
-    }
-    .stab {
-      padding: .6rem 1.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(200,151,58,.22);
-      color: var(--muted);
-      font-size: .72rem;
-      font-weight: 500;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      transition: var(--t);
-      cursor: pointer;
-    }
-    .stab.on, .stab:hover {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--black);
-    }
-
-    .srv-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
-    }
-    .scard {
-      display: flex;
-      flex-direction: column;
-      border-radius: 16px;
-      overflow: hidden;
-      background: rgba(20,43,26,.4);
-      border: 1px solid rgba(200,151,58,.1);
-      transition: var(--t);
-      backdrop-filter: blur(8px);
-    }
-    .scard:hover {
-      transform: translateY(-6px);
-      border-color: rgba(200,151,58,.3);
-      box-shadow: 0 24px 64px rgba(0,0,0,.4), 0 0 40px rgba(200,151,58,.08);
-    }
-    .scard-img {
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-    }
+    /* SERVICES */
+    #servicos { background: linear-gradient(180deg, var(--black) 0%, var(--forest) 100%); }
+    .srv-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem; margin-bottom: 3.5rem; }
+    .stab { padding: .6rem 1.5rem; border-radius: 999px; border: 1px solid rgba(200,151,58,.22); color: var(--muted); font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; transition: var(--t); cursor: pointer; }
+    .stab.on, .stab:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+    .srv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .scard { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: rgba(20,43,26,.4); border: 1px solid rgba(200,151,58,.1); transition: var(--t); backdrop-filter: blur(8px); }
+    .scard:hover { transform: translateY(-6px); border-color: rgba(200,151,58,.3); box-shadow: 0 24px 64px rgba(0,0,0,.4), 0 0 40px rgba(200,151,58,.08); }
+    .scard-img { height: 220px; position: relative; overflow: hidden; }
     .scard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
     .scard:hover .scard-img img { transform: scale(1.07); }
-    .scard-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 40%, rgba(8,10,8,.7) 100%);
-    }
-    .sbadge {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 2;
-      padding: .28rem .8rem;
-      border-radius: 999px;
-      font-size: .58rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
+    .scard-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(8,10,8,.7) 100%); }
+    .sbadge { position: absolute; top: 1rem; right: 1rem; z-index: 2; padding: .28rem .8rem; border-radius: 999px; font-size: .58rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
     .sbadge-gold { background: rgba(200,151,58,.9); color: var(--black); }
     .sbadge-green { background: rgba(28,66,40,.9); color: var(--gold-lt); border: 1px solid rgba(200,151,58,.25); }
-
     .scard-body { display: flex; flex-direction: column; flex: 1; padding: 1.5rem; }
-    .scard-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--gold-lt);
-      margin-bottom: .5rem;
-    }
+    .scard-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--gold-lt); margin-bottom: .5rem; }
     .scard-desc { font-size: .85rem; line-height: 1.75; color: var(--muted); flex: 1; margin-bottom: 1.2rem; }
-    .scard-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(200,151,58,.1);
-      gap: .8rem;
-    }
+    .scard-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid rgba(200,151,58,.1); gap: .8rem; }
     .scard-price { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold); }
-    .scard-cta {
-      padding: .45rem .95rem;
-      border-radius: 999px;
-      border: 1px solid rgba(200,151,58,.28);
-      color: var(--gold-lt);
-      font-size: .64rem;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      transition: var(--t);
-    }
+    .scard-cta { padding: .45rem .95rem; border-radius: 999px; border: 1px solid rgba(200,151,58,.28); color: var(--gold-lt); font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transition: var(--t); }
     .scard-cta:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
 
-    /* =============================================
-       CTA BANNER
-    ============================================= */
-    .cta-sec {
-      position: relative;
-      overflow: hidden;
-      padding: 8rem 0;
-      text-align: center;
-    }
-    .cta-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-    .cta-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
-      filter: brightness(.35);
-    }
-    .cta-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(14,31,18,.7), rgba(8,10,8,.9));
-    }
+    /* CTA BANNER */
+    .cta-sec { position: relative; overflow: hidden; padding: 8rem 0; text-align: center; }
+    .cta-bg { position: absolute; inset: 0; z-index: 0; }
+    .cta-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; filter: brightness(.35); }
+    .cta-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(14,31,18,.7), rgba(8,10,8,.9)); }
     .cta-inner { position: relative; z-index: 2; }
     .cta-script { font-family: 'Great Vibes', cursive; font-size: clamp(2rem, 4vw, 3.2rem); color: var(--gold); margin-bottom: .4rem; }
     .cta-h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; color: var(--cream); margin-bottom: 1rem; line-height: 1.05; }
     .cta-desc { font-size: 1rem; color: rgba(244,237,218,.65); max-width: 480px; margin: 0 auto 2.4rem; line-height: 1.8; }
     .cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
 
-    /* =============================================
-       EVENT TYPES
-    ============================================= */
+    /* EVENT TYPES */
     #eventos { background: var(--deep); }
-    .ev-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .evcard {
-      position: relative;
-      height: 340px;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-    }
+    .ev-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .evcard { position: relative; height: 340px; border-radius: 16px; overflow: hidden; cursor: pointer; }
     .evcard img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
     .evcard:hover img { transform: scale(1.07); }
-    .evcard-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(8,10,8,.88) 0%, rgba(8,10,8,.3) 60%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 2rem;
-      transition: var(--t);
-    }
+    .evcard-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,10,8,.88) 0%, rgba(8,10,8,.3) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; transition: var(--t); }
     .evcard:hover .evcard-overlay { background: linear-gradient(to top, rgba(8,10,8,.94) 0%, rgba(8,10,8,.4) 70%, transparent 100%); }
     .evcard-icon { font-size: 2.4rem; margin-bottom: .6rem; }
     .evcard-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: var(--cream); margin-bottom: .4rem; }
     .evcard-desc { font-size: .84rem; line-height: 1.65; color: rgba(244,237,218,.65); max-height: 0; overflow: hidden; transition: max-height .4s ease, opacity .4s ease; opacity: 0; }
     .evcard:hover .evcard-desc { max-height: 100px; opacity: 1; }
-    .evcard-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-      margin-top: .8rem;
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--gold-lt);
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity .3s ease .1s, transform .3s ease .1s;
-    }
+    .evcard-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: .8rem; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-lt); opacity: 0; transform: translateY(8px); transition: opacity .3s ease .1s, transform .3s ease .1s; }
     .evcard:hover .evcard-link { opacity: 1; transform: none; }
     .evcard:nth-child(1) { grid-column: span 1; grid-row: span 1; }
     .evcard:nth-child(2) { grid-column: span 1; grid-row: span 1; }
     .evcard:nth-child(3) { grid-column: span 2; grid-row: span 1; height: 280px; }
 
-    /* =============================================
-       TESTIMONIALS
-    ============================================= */
+    /* TESTIMONIALS */
     #depoimentos { background: var(--black); }
-    .tgrid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
-    }
-    .tcard {
-      padding: 2rem;
-      border-radius: 16px;
-      background: linear-gradient(160deg, rgba(20,43,26,.4), rgba(8,10,8,.6));
-      border: 1px solid rgba(200,151,58,.1);
-      transition: var(--t);
-      position: relative;
-    }
-    .tcard::before {
-      content: '\201C';
-      position: absolute;
-      top: .5rem;
-      left: 1.5rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      color: var(--gold);
-      opacity: .12;
-      line-height: 1;
-    }
+    .tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .tcard { padding: 2rem; border-radius: 16px; background: linear-gradient(160deg, rgba(20,43,26,.4), rgba(8,10,8,.6)); border: 1px solid rgba(200,151,58,.1); transition: var(--t); position: relative; }
+    .tcard::before { content: '\201C'; position: absolute; top: .5rem; left: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--gold); opacity: .12; line-height: 1; }
     .tcard:hover { transform: translateY(-5px); border-color: rgba(200,151,58,.28); }
     .tstars { color: var(--gold); font-size: .9rem; letter-spacing: .2em; margin-bottom: 1rem; }
-    .ttext {
-      font-size: .93rem;
-      line-height: 1.85;
-      color: rgba(244,237,218,.7);
-      font-style: italic;
-      margin-bottom: 1.6rem;
-    }
+    .ttext { font-size: .93rem; line-height: 1.85; color: rgba(244,237,218,.7); font-style: italic; margin-bottom: 1.6rem; }
     .tauthor { display: flex; align-items: center; gap: .9rem; }
-    .tavatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--moss);
-      border: 2px solid rgba(200,151,58,.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      overflow: hidden;
-    }
+    .tavatar { width: 44px; height: 44px; border-radius: 50%; background: var(--moss); border: 2px solid rgba(200,151,58,.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; overflow: hidden; }
     .tavatar img { width: 100%; height: 100%; object-fit: cover; }
     .tname { display: block; font-weight: 600; font-size: .88rem; color: var(--gold-lt); }
     .trole { display: block; font-size: .73rem; color: var(--muted); margin-top: .15rem; }
-    .tveri {
-      display: inline-flex;
-      align-items: center;
-      gap: .3rem;
-      margin-top: .8rem;
-      font-size: .62rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--wa);
-    }
+    .tveri { display: inline-flex; align-items: center; gap: .3rem; margin-top: .8rem; font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; color: var(--wa); }
 
-    /* =============================================
-       FAQ
-    ============================================= */
+    /* FAQ */
     #faq { background: var(--deep); }
     .faq-wrap { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: .85rem; }
-    .fitem {
-      background: rgba(20,43,26,.25);
-      border: 1px solid rgba(200,151,58,.1);
-      border-radius: var(--r);
-      overflow: hidden;
-      transition: border-color var(--t);
-    }
+    .fitem { background: rgba(20,43,26,.25); border: 1px solid rgba(200,151,58,.1); border-radius: var(--r); overflow: hidden; transition: border-color var(--t); }
     .fitem:hover { border-color: rgba(200,151,58,.28); }
-    .fitem summary {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--gold-lt);
-      cursor: pointer;
-    }
+    .fitem summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--gold-lt); cursor: pointer; }
     .fitem summary::-webkit-details-marker { display: none; }
     .fitem summary::after { content: '+'; font-size: 1.5rem; color: var(--gold); transition: transform var(--t); flex-shrink: 0; }
     .fitem[open] summary::after { transform: rotate(45deg); }
     .fitem p { padding: 0 1.5rem 1.5rem; font-size: .9rem; line-height: 1.75; color: rgba(244,237,218,.68); }
 
-    /* =============================================
-       CONTACT
-    ============================================= */
+    /* CONTACT */
     #contato { background: var(--forest); border-top: 1px solid rgba(200,151,58,.1); }
-    .cntgrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-    .cnt-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 700;
-      line-height: 1.05;
-      color: var(--cream);
-      margin: 1rem 0 1.2rem;
-    }
+    .cntgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .cnt-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.05; color: var(--cream); margin: 1rem 0 1.2rem; }
     .cnt-desc { font-size: 1rem; line-height: 1.85; color: var(--muted); margin-bottom: 2rem; }
     .cnt-rows { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 2rem; }
     .crow { display: flex; align-items: flex-start; gap: .9rem; }
     .crow-ic { font-size: 1.2rem; line-height: 1; margin-top: .1rem; }
     .crow-label { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: .2rem; }
     .crow-val { font-size: .92rem; color: rgba(244,237,218,.72); line-height: 1.5; }
-
-    .wa-panel {
-      background: linear-gradient(135deg, rgba(37,211,102,.1), rgba(37,211,102,.04));
-      border: 1px solid rgba(37,211,102,.2);
-      border-radius: 16px;
-      padding: 2rem;
-    }
+    .wa-panel { background: linear-gradient(135deg, rgba(37,211,102,.1), rgba(37,211,102,.04)); border: 1px solid rgba(37,211,102,.2); border-radius: 16px; padding: 2rem; }
     .wa-panel-label { font-size: .65rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #8cf2b2; margin-bottom: .6rem; }
     .wa-panel-desc { font-size: .9rem; line-height: 1.7; color: rgba(244,237,218,.72); margin-bottom: 1.2rem; }
     .wa-msgs { display: flex; flex-direction: column; gap: .6rem; }
-    .wmsg {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      padding: .85rem 1rem;
-      border-radius: var(--r);
-      border: 1px solid rgba(244,237,218,.08);
-      background: rgba(244,237,218,.03);
-      font-size: .84rem;
-      color: rgba(244,237,218,.74);
-      transition: var(--t);
-      cursor: pointer;
-    }
+    .wmsg { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; border-radius: var(--r); border: 1px solid rgba(244,237,218,.08); background: rgba(244,237,218,.03); font-size: .84rem; color: rgba(244,237,218,.74); transition: var(--t); cursor: pointer; }
     .wmsg:hover { background: rgba(37,211,102,.1); border-color: rgba(37,211,102,.3); color: #95f4b9; transform: translateX(4px); }
     .wmsg svg { width: 15px; height: 15px; min-width: 15px; color: var(--wa); }
-
-    /* urgency pulse */
-    .urgency {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      padding: .9rem 1.2rem;
-      border-radius: var(--r);
-      background: rgba(200,151,58,.08);
-      border: 1px solid rgba(200,151,58,.18);
-      margin-bottom: 1.8rem;
-    }
+    .urgency { display: flex; align-items: center; gap: .75rem; padding: .9rem 1.2rem; border-radius: var(--r); background: rgba(200,151,58,.08); border: 1px solid rgba(200,151,58,.18); margin-bottom: 1.8rem; }
     .urg-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; animation: pulse 1.6s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:.7} }
     .urg-text { font-size: .84rem; color: rgba(244,237,218,.76); }
     .urg-text strong { color: var(--gold-lt); }
 
-    /* =============================================
-       INSTAGRAM
-    ============================================= */
+    /* INSTAGRAM */
     #instagram { background: var(--black); text-align: center; }
-    .ig-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: .6rem;
-      margin-top: 2.5rem;
-    }
-    .igitem {
-      position: relative;
-      aspect-ratio: 1;
-      border-radius: 10px;
-      overflow: hidden;
-      display: block;
-    }
+    .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin-top: 2.5rem; }
+    .igitem { position: relative; aspect-ratio: 1; border-radius: 10px; overflow: hidden; display: block; }
     .igitem img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
     .igitem:hover img { transform: scale(1.07); }
-    .ig-ov {
-      position: absolute;
-      inset: 0;
-      background: rgba(8,10,8,.65);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity .35s;
-    }
+    .ig-ov { position: absolute; inset: 0; background: rgba(8,10,8,.65); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity .35s; }
     .ig-ov span { font-size: 1.6rem; display: block; margin-bottom: .3rem; }
     .ig-ov p { font-size: .65rem; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.7); }
     .igitem:hover .ig-ov { opacity: 1; }
 
-    /* =============================================
-       FLOAT WA
-    ============================================= */
-    .float-wa {
-      position: fixed;
-      right: 1.2rem;
-      bottom: 1.2rem;
-      z-index: 400;
-      display: inline-flex;
-      align-items: center;
-      gap: .7rem;
-      padding: .9rem 1.2rem;
-      border-radius: 999px;
-      background: var(--wa);
-      color: #fff;
-      font-size: .78rem;
-      font-weight: 600;
-      box-shadow: 0 14px 40px rgba(37,211,102,.28);
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
+    /* FLOAT WA */
+    .float-wa { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 400; display: inline-flex; align-items: center; gap: .7rem; padding: .9rem 1.2rem; border-radius: 999px; background: var(--wa); color: #fff; font-size: .78rem; font-weight: 600; box-shadow: 0 14px 40px rgba(37,211,102,.28); transition: transform .3s ease, box-shadow .3s ease; }
     .float-wa:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(37,211,102,.36); }
     .float-wa svg { width: 18px; height: 18px; }
 
-    /* =============================================
-       FOOTER
-    ============================================= */
-    footer {
-      background: var(--deep);
-      border-top: 1px solid rgba(200,151,58,.08);
-      padding: 2.2rem 0;
-    }
-    .ftr-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      margin-bottom: 1.4rem;
-    }
+    /* FOOTER */
+    footer { background: var(--deep); border-top: 1px solid rgba(200,151,58,.08); padding: 2.2rem 0; }
+    .ftr-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 1.4rem; }
     .ftr-brand { display: flex; align-items: center; gap: 1rem; }
     .ftr-brand img { max-height: 44px; }
     .ftr-tag { font-size: .75rem; color: rgba(244,237,218,.38); max-width: 200px; line-height: 1.5; }
@@ -1185,45 +335,23 @@
     .ftr-links a { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(244,237,218,.42); transition: color var(--t); }
     .ftr-links a:hover { color: var(--gold-lt); }
     .ftr-socials { display: flex; gap: .5rem; }
-    .sic {
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: 1px solid rgba(200,151,58,.2);
-      color: rgba(244,237,218,.5);
-      font-size: 1rem;
-      transition: var(--t);
-    }
+    .sic { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid rgba(200,151,58,.2); color: rgba(244,237,218,.5); font-size: 1rem; transition: var(--t); }
     .sic:hover { border-color: var(--gold); color: var(--gold-lt); background: rgba(200,151,58,.07); }
-    .ftr-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: .5rem;
-      border-top: 1px solid rgba(200,151,58,.06);
-      padding-top: 1.2rem;
-    }
+    .ftr-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; border-top: 1px solid rgba(200,151,58,.06); padding-top: 1.2rem; }
     .ftr-bottom p { font-size: .65rem; color: rgba(244,237,218,.25); }
 
-    /* =============================================
-       REVEAL ANIMATIONS
-    ============================================= */
+    /* REVEAL ANIMATIONS */
     .rv { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
     .rv-l { opacity: 0; transform: translateX(-28px); transition: opacity .8s ease, transform .8s ease; }
     .rv-r { opacity: 0; transform: translateX(28px); transition: opacity .8s ease, transform .8s ease; }
     .rv.in, .rv-l.in, .rv-r.in { opacity: 1; transform: none; }
 
-    /* =============================================
-       RESPONSIVE
-    ============================================= */
+    /* RESPONSIVE */
     @media (max-width: 1100px) {
       .hero-stats { display: none; }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-imgs { height: 460px; }
+      /* FIX 6: oculta a linha conectora quando o grid não é mais de 4 colunas */
       .steps { grid-template-columns: repeat(2, 1fr); }
       .steps::before { display: none; }
       .tgrid { grid-template-columns: 1fr 1fr; }
@@ -1236,10 +364,7 @@
       .ev-grid { grid-template-columns: 1fr; }
       .evcard:nth-child(3) { grid-column: span 1; }
       .ig-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-mosaic {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-      }
+      .gallery-mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
       .gitem { grid-column: span 1 !important; grid-row: span 1 !important; height: 220px; }
     }
 
@@ -1247,27 +372,21 @@
       nav.desk-nav, .nav-cta { display: none; }
       .burger { display: flex; }
       .logo img { max-height: 46px; }
-
       #hero { padding-top: 0; }
       .hero-inner { padding: 9rem 0 5rem; }
       .hero-h1 { font-size: clamp(3rem, 10vw, 5rem); }
-
       .about-imgs { height: 360px; }
       .srv-grid { grid-template-columns: 1fr; }
       .tgrid { grid-template-columns: 1fr; }
       .about-chips { grid-template-columns: 1fr; }
       .about-stats { gap: 1.5rem; }
-
       .sec { padding: 5rem 0; }
       .sec-sm { padding: 3rem 0; }
       .sec-header { margin-bottom: 3rem; }
-
       .cta-btns { flex-direction: column; align-items: center; }
       .cta-btns .btn { width: 100%; max-width: 300px; }
-
       .float-wa span { display: none; }
       .float-wa { padding: .9rem; border-radius: 50%; }
-
       footer { padding: 1.6rem 0; }
       .ftr-row { flex-direction: column; align-items: center; text-align: center; }
       .ftr-brand { flex-direction: column; }
@@ -1284,45 +403,31 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
 
-    /* =============================================
-       MISC ICONS (WhatsApp inline SVG)
-    ============================================= */
-    .wa-ic {
-      width: 18px; height: 18px; flex-shrink: 0;
-      fill: currentColor;
-    }
+    .wa-ic { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
   </style>
 </head>
 <body>
 
-<!-- WhatsApp SVG symbol -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="wa" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </symbol>
 </svg>
 
-<!-- LOADER -->
 <div id="loader">
   <img src="./Assets/logo.png" alt="Carregando Bons Drinks" class="loader-logo">
   <div class="loader-bar"><div class="loader-bar-fill"></div></div>
 </div>
 
-<!-- HEADER -->
 <header id="hdr">
   <div class="container">
     <div class="nav-wrap">
       <a href="#inicio" class="logo" aria-label="Bons Drinks – Início">
         <img src="./Assets/logo.png" alt="Bons Drinks">
       </a>
-
       <nav class="desk-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="#inicio" id="nl-inicio">Início</a></li>
@@ -1334,14 +439,12 @@
           <li><a href="#contato" id="nl-contato">Contato</a></li>
         </ul>
       </nav>
-
       <div class="nav-cta">
         <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="nav-orcamento">
           <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
           Orçamento Grátis
         </a>
       </div>
-
       <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav">
         <span></span><span></span><span></span>
       </button>
@@ -1349,7 +452,6 @@
   </div>
 </header>
 
-<!-- MOBILE NAV -->
 <nav id="mnav" aria-label="Menu mobile">
   <a href="#inicio" class="mlink">Início</a>
   <a href="#sobre" class="mlink">Sobre</a>
@@ -1365,14 +467,12 @@
 </nav>
 
 <main>
-  <!-- ====== HERO ====== -->
   <section id="inicio">
     <div class="hero-bg">
       <img src="./Assets/evento.jpg" alt="Bons Drinks – Open Bar Premium em Santa Maria RS" fetchpriority="high">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-noise"></div>
-
     <div class="container">
       <div class="hero-inner">
         <p class="hero-script-tag">Coquetelaria Premium</p>
@@ -1388,20 +488,16 @@
             <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
             Orçamento Grátis
           </a>
-          <a href="#servicos" class="btn btn-ghost" id="hero-servicos">
-            Ver Serviços
-          </a>
+          <a href="#servicos" class="btn btn-ghost" id="hero-servicos">Ver Serviços</a>
         </div>
       </div>
-
-      <!-- floating stat cards -->
       <div class="hero-stats" aria-hidden="true">
         <div class="hstat">
-          <span class="hstat-n" data-count="200">0</span>
+          <span class="hstat-n" data-count="200" data-suffix="+">0</span>
           <span class="hstat-l">Eventos<br>Realizados</span>
         </div>
         <div class="hstat">
-          <span class="hstat-n" data-count="50">0</span>
+          <span class="hstat-n" data-count="50" data-suffix="+">0</span>
           <span class="hstat-l">Drinks<br>em Carta</span>
         </div>
         <div class="hstat">
@@ -1410,19 +506,16 @@
         </div>
       </div>
     </div>
-
     <div class="hero-scroll" aria-hidden="true">
       <span>Explorar</span>
       <div class="hero-scroll-line"></div>
     </div>
   </section>
 
-  <!-- ====== MARQUEE STRIP ====== -->
   <div class="strip" aria-hidden="true">
     <div class="strip-track" id="stripTrack"></div>
   </div>
 
-  <!-- ====== SOBRE ====== -->
   <section id="sobre" class="sec">
     <div class="container">
       <div class="about-grid">
@@ -1438,7 +531,6 @@
             <span>Anos de<br>Experiência</span>
           </div>
         </div>
-
         <div class="rv-r">
           <span class="eyebrow">Nossa História</span>
           <h2 class="sec-title display" style="margin:1rem 0 1.2rem">Paixão por cada <span>drink</span> que servimos</h2>
@@ -1448,58 +540,25 @@
           <p style="font-size:1rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem">
             Com mais de <strong style="color:var(--gold-lt)">200 eventos realizados</strong> em Santa Maria e região, nossa equipe de bartenders apaixonados cuida de tudo: estrutura, insumos, gelo e serviço de alto nível.
           </p>
-
           <div class="about-chips">
-            <div class="chip">
-              <span class="chip-ic">🍸</span>
-              <span class="chip-tx">Open Bar Completo</span>
-            </div>
-            <div class="chip">
-              <span class="chip-ic">🍹</span>
-              <span class="chip-tx">Drinks Personalizados</span>
-            </div>
-            <div class="chip">
-              <span class="chip-ic">🥂</span>
-              <span class="chip-tx">Mocktails Premium</span>
-            </div>
-            <div class="chip">
-              <span class="chip-ic">🎯</span>
-              <span class="chip-tx">Consultoria Completa</span>
-            </div>
-            <div class="chip">
-              <span class="chip-ic">🚚</span>
-              <span class="chip-tx">Estrutura Completa</span>
-            </div>
-            <div class="chip">
-              <span class="chip-ic">📍</span>
-              <span class="chip-tx">SM e Região</span>
-            </div>
+            <div class="chip"><span class="chip-ic">🍸</span><span class="chip-tx">Open Bar Completo</span></div>
+            <div class="chip"><span class="chip-ic">🍹</span><span class="chip-tx">Drinks Personalizados</span></div>
+            <div class="chip"><span class="chip-ic">🥂</span><span class="chip-tx">Mocktails Premium</span></div>
+            <div class="chip"><span class="chip-ic">🎯</span><span class="chip-tx">Consultoria Completa</span></div>
+            <div class="chip"><span class="chip-ic">🚚</span><span class="chip-tx">Estrutura Completa</span></div>
+            <div class="chip"><span class="chip-ic">📍</span><span class="chip-tx">SM e Região</span></div>
           </div>
-
           <div class="about-stats">
-            <div>
-              <span class="ast-n">200+</span>
-              <span class="ast-l">Eventos</span>
-            </div>
-            <div>
-              <span class="ast-n">50+</span>
-              <span class="ast-l">Drinks</span>
-            </div>
-            <div>
-              <span class="ast-n">100%</span>
-              <span class="ast-l">Satisfação</span>
-            </div>
-            <div>
-              <span class="ast-n">⭐ 5.0</span>
-              <span class="ast-l">Avaliação</span>
-            </div>
+            <div><span class="ast-n">200+</span><span class="ast-l">Eventos</span></div>
+            <div><span class="ast-n">50+</span><span class="ast-l">Drinks</span></div>
+            <div><span class="ast-n">100%</span><span class="ast-l">Satisfação</span></div>
+            <div><span class="ast-n">⭐ 5.0</span><span class="ast-l">Avaliação</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== COMO FUNCIONA ====== -->
   <section id="como-funciona" class="sec">
     <div class="container">
       <div class="sec-header center rv">
@@ -1508,7 +567,6 @@
         <span class="gold-line center"></span>
         <p class="sec-desc">Do primeiro contato ao último brinde, nossa equipe cuida de cada etapa com atenção e profissionalismo.</p>
       </div>
-
       <div class="steps">
         <div class="step rv">
           <div class="step-num">01</div>
@@ -1534,7 +592,6 @@
     </div>
   </section>
 
-  <!-- ====== GALERIA ====== -->
   <section id="galeria" class="sec-sm">
     <div class="container">
       <div class="sec-header center rv">
@@ -1542,8 +599,7 @@
         <h2 class="sec-title display">Momentos que <span>criamos</span></h2>
         <span class="gold-line center"></span>
       </div>
-    </div>
-    <div style="padding:0 2rem">
+      <!-- FIX 3: galeria agora usa .container para alinhamento consistente -->
       <div class="gallery-mosaic rv">
         <div class="gitem">
           <img src="./Assets/casamento.jpg" alt="Open bar em casamento – Bons Drinks Santa Maria RS" loading="lazy">
@@ -1569,7 +625,6 @@
     </div>
   </section>
 
-  <!-- ====== SERVIÇOS / DRINKS ====== -->
   <section id="servicos" class="sec">
     <div class="container">
       <div class="sec-header center rv">
@@ -1578,15 +633,12 @@
         <span class="gold-line center"></span>
         <p class="sec-desc">Carta completa de drinks e diferenciais para tornar seu evento inesquecível.</p>
       </div>
-
       <div class="srv-tabs">
         <button class="stab on" data-filter="all" id="tab-all">Todos</button>
         <button class="stab" data-filter="diferenciais" id="tab-dif">Diferenciais</button>
         <button class="stab" data-filter="eventos" id="tab-ev">Por Evento</button>
       </div>
-
       <div class="srv-grid">
-
         <article class="scard rv" data-cat="diferenciais">
           <div class="scard-img">
             <img src="./Assets/open-bar-premium.jpg" alt="Open bar premium em Santa Maria RS" loading="lazy">
@@ -1601,7 +653,6 @@
             </div>
           </div>
         </article>
-
         <article class="scard rv" data-cat="diferenciais">
           <div class="scard-img">
             <img src="./Assets/carta-drinks.jpg" alt="Carta exclusiva de drinks personalizada" loading="lazy">
@@ -1616,7 +667,6 @@
             </div>
           </div>
         </article>
-
         <article class="scard rv" data-cat="diferenciais">
           <div class="scard-img">
             <img src="./Assets/mocktail.jpg" alt="Mocktails e drinks sem álcool premium" loading="lazy">
@@ -1631,7 +681,6 @@
             </div>
           </div>
         </article>
-
         <article class="scard rv" data-cat="eventos">
           <div class="scard-img">
             <img src="./Assets/casamento.jpg" alt="Open bar para casamentos inesquecíveis" loading="lazy">
@@ -1646,7 +695,6 @@
             </div>
           </div>
         </article>
-
         <article class="scard rv" data-cat="eventos">
           <div class="scard-img">
             <img src="./Assets/formatura.jpg" alt="Open bar para formaturas em Santa Maria RS" loading="lazy">
@@ -1661,7 +709,6 @@
             </div>
           </div>
         </article>
-
         <article class="scard rv" data-cat="eventos">
           <div class="scard-img">
             <img src="./Assets/corporativo.jpg" alt="Drinks para eventos corporativos em Santa Maria RS" loading="lazy">
@@ -1676,9 +723,7 @@
             </div>
           </div>
         </article>
-
       </div>
-
       <p style="text-align:center;margin-top:3rem;color:var(--muted);font-size:.88rem" class="rv">Carta de drinks completa e personalizada de acordo com o seu evento</p>
       <div style="text-align:center;margin-top:1.2rem" class="rv">
         <a href="https://wa.me/5555992275278?text=Quero%20ver%20a%20carta%20completa." target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="ver-carta">Ver Carta Completa</a>
@@ -1686,7 +731,6 @@
     </div>
   </section>
 
-  <!-- ====== CTA BANNER ====== -->
   <div class="cta-sec">
     <div class="cta-bg">
       <img src="./Assets/foto-extra-1.jpg" alt="Bons Drinks em ação num evento premium" loading="lazy">
@@ -1707,7 +751,6 @@
     </div>
   </div>
 
-  <!-- ====== TIPOS DE EVENTO ====== -->
   <section id="eventos" class="sec">
     <div class="container">
       <div class="sec-header center rv">
@@ -1716,7 +759,6 @@
         <span class="gold-line center"></span>
         <p class="sec-desc">Cada celebração é única. Adaptamos nosso serviço para criar a experiência perfeita.</p>
       </div>
-
       <div class="ev-grid">
         <div class="evcard rv">
           <img src="./Assets/casamento.jpg" alt="Open bar para casamentos – Bons Drinks Santa Maria RS" loading="lazy">
@@ -1727,7 +769,6 @@
             <a href="https://wa.me/5555992275278?text=Drinks%20para%20o%20meu%20casamento!" class="evcard-link" target="_blank" rel="noopener noreferrer">Solicitar proposta →</a>
           </div>
         </div>
-
         <div class="evcard rv">
           <img src="./Assets/festa.jpg" alt="Open bar para festas e aniversários – Bons Drinks" loading="lazy">
           <div class="evcard-overlay">
@@ -1737,7 +778,6 @@
             <a href="https://wa.me/5555992275278" class="evcard-link" target="_blank" rel="noopener noreferrer">Solicitar proposta →</a>
           </div>
         </div>
-
         <div class="evcard rv">
           <img src="./Assets/foto-extra-2.jpg" alt="Open bar para formaturas e corporativos – Bons Drinks" loading="lazy">
           <div class="evcard-overlay">
@@ -1751,7 +791,6 @@
     </div>
   </section>
 
-  <!-- ====== DEPOIMENTOS ====== -->
   <section id="depoimentos" class="sec">
     <div class="container">
       <div class="sec-header center rv">
@@ -1760,7 +799,6 @@
         <span class="gold-line center"></span>
         <p class="sec-desc">Depoimentos reais de clientes que confiaram na Bons Drinks para o seu grande momento.</p>
       </div>
-
       <div class="tgrid">
         <div class="tcard rv">
           <div class="tstars">★★★★★</div>
@@ -1777,7 +815,6 @@
             Cliente verificado
           </div>
         </div>
-
         <div class="tcard rv">
           <div class="tstars">★★★★★</div>
           <p class="ttext">Contratamos para nossa formatura e superou todas as expectativas! Os drinks autorais fizeram sucesso absurdo. Já indiquei para todo mundo da turma.</p>
@@ -1793,7 +830,6 @@
             Cliente verificado
           </div>
         </div>
-
         <div class="tcard rv">
           <div class="tstars">★★★★★</div>
           <p class="ttext">Profissionalismo impecável! Fizeram um drink personalizado com o nome da empresa que foi o hit do evento. Todos adoraram. Com certeza contrataremos de novo.</p>
@@ -1813,7 +849,6 @@
     </div>
   </section>
 
-  <!-- ====== FAQ ====== -->
   <section id="faq" class="sec">
     <div class="container">
       <div class="sec-header center rv">
@@ -1822,35 +857,16 @@
         <span class="gold-line center"></span>
       </div>
       <div class="faq-wrap">
-        <details class="fitem rv">
-          <summary>Como funciona o orçamento?</summary>
-          <p>É simples e grátis! Entre em contato pelo WhatsApp, conte sobre seu evento (tipo, data, número de convidados e local) e enviamos uma proposta personalizada em até 24 horas.</p>
-        </details>
-        <details class="fitem rv">
-          <summary>Vocês atendem fora de Santa Maria?</summary>
-          <p>Sim! Atendemos Santa Maria e toda a região central do RS. Para eventos em outras cidades, entre em contato e verificamos disponibilidade conforme a distância.</p>
-        </details>
-        <details class="fitem rv">
-          <summary>Qual a antecedência mínima para contratar?</summary>
-          <p>Recomendamos contato com pelo menos 30 dias de antecedência. Para casamentos e eventos grandes, o ideal é fechar com 2 a 3 meses de antecipação para garantir a data.</p>
-        </details>
-        <details class="fitem rv">
-          <summary>Vocês fornecem toda a estrutura do bar?</summary>
-          <p>Sim! Levamos toda a estrutura: bar, utensílios, insumos, gelo e equipe treinada. Você não precisa se preocupar com nada além de curtir a festa.</p>
-        </details>
-        <details class="fitem rv">
-          <summary>Tem opção sem álcool na carta?</summary>
-          <p>Com certeza! Nossa carta inclui uma linha completa de drinks sem álcool, mocktails e sucos artesanais tão criativos quanto os coquetéis tradicionais.</p>
-        </details>
-        <details class="fitem rv">
-          <summary>Como é feito o pagamento?</summary>
-          <p>Trabalhamos com sinal na confirmação do contrato e o restante próximo à data do evento. Aceitamos Pix, transferência e cartão. Os detalhes são combinados na proposta.</p>
-        </details>
+        <details class="fitem rv"><summary>Como funciona o orçamento?</summary><p>É simples e grátis! Entre em contato pelo WhatsApp, conte sobre seu evento (tipo, data, número de convidados e local) e enviamos uma proposta personalizada em até 24 horas.</p></details>
+        <details class="fitem rv"><summary>Vocês atendem fora de Santa Maria?</summary><p>Sim! Atendemos Santa Maria e toda a região central do RS. Para eventos em outras cidades, entre em contato e verificamos disponibilidade conforme a distância.</p></details>
+        <details class="fitem rv"><summary>Qual a antecedência mínima para contratar?</summary><p>Recomendamos contato com pelo menos 30 dias de antecedência. Para casamentos e eventos grandes, o ideal é fechar com 2 a 3 meses de antecipação para garantir a data.</p></details>
+        <details class="fitem rv"><summary>Vocês fornecem toda a estrutura do bar?</summary><p>Sim! Levamos toda a estrutura: bar, utensílios, insumos, gelo e equipe treinada. Você não precisa se preocupar com nada além de curtir a festa.</p></details>
+        <details class="fitem rv"><summary>Tem opção sem álcool na carta?</summary><p>Com certeza! Nossa carta inclui uma linha completa de drinks sem álcool, mocktails e sucos artesanais tão criativos quanto os coquetéis tradicionais.</p></details>
+        <details class="fitem rv"><summary>Como é feito o pagamento?</summary><p>Trabalhamos com sinal na confirmação do contrato e o restante próximo à data do evento. Aceitamos Pix, transferência e cartão. Os detalhes são combinados na proposta.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- ====== CONTATO ====== -->
   <section id="contato" class="sec">
     <div class="container">
       <div class="cntgrid">
@@ -1858,42 +874,20 @@
           <span class="eyebrow">Vamos conversar</span>
           <h2 class="cnt-title">Pronto para criar um evento inesquecível?</h2>
           <p class="cnt-desc">Entre em contato pelo WhatsApp e vamos planejar juntos o open bar ideal para o seu momento especial.</p>
-
           <div class="urgency">
             <div class="urg-dot"></div>
             <p class="urg-text"><strong>Agenda limitada</strong> — Reserve sua data com antecedência!</p>
           </div>
-
           <div class="cnt-rows">
-            <div class="crow">
-              <span class="crow-ic">📱</span>
-              <div>
-                <span class="crow-label">WhatsApp</span>
-                <span class="crow-val">(55) 99227-5278</span>
-              </div>
-            </div>
-            <div class="crow">
-              <span class="crow-ic">📸</span>
-              <div>
-                <span class="crow-label">Instagram</span>
-                <span class="crow-val">@bonsdrinkssm</span>
-              </div>
-            </div>
-            <div class="crow">
-              <span class="crow-ic">📍</span>
-              <div>
-                <span class="crow-label">Localização</span>
-                <span class="crow-val">Santa Maria, RS e região</span>
-              </div>
-            </div>
+            <div class="crow"><span class="crow-ic">📱</span><div><span class="crow-label">WhatsApp</span><span class="crow-val">(55) 99227-5278</span></div></div>
+            <div class="crow"><span class="crow-ic">📸</span><div><span class="crow-label">Instagram</span><span class="crow-val">@bonsdrinkssm</span></div></div>
+            <div class="crow"><span class="crow-ic">📍</span><div><span class="crow-label">Localização</span><span class="crow-val">Santa Maria, RS e região</span></div></div>
           </div>
-
           <a href="https://wa.me/5555992275278?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="contato-orcamento">
             <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
             Falar com a Equipe Agora
           </a>
         </div>
-
         <div class="rv-r">
           <div class="wa-panel">
             <p class="wa-panel-label">💬 Mensagens Rápidas</p>
@@ -1928,7 +922,6 @@
     </div>
   </section>
 
-  <!-- ====== INSTAGRAM ====== -->
   <section id="instagram" class="sec-sm">
     <div class="container">
       <div class="sec-header center rv" style="margin-bottom:0">
@@ -1954,22 +947,17 @@
         </a>
       </div>
       <div style="text-align:center;margin-top:2rem" class="rv">
-        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="ig-seguir">
-          📸 Seguir no Instagram
-        </a>
+        <a href="https://www.instagram.com/bonsdrinkssm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="ig-seguir">📸 Seguir no Instagram</a>
       </div>
     </div>
   </section>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="ftr-row">
       <div class="ftr-brand">
-        <a href="#inicio" aria-label="Bons Drinks">
-          <img src="./Assets/logo.png" alt="Bons Drinks Logo">
-        </a>
+        <a href="#inicio" aria-label="Bons Drinks"><img src="./Assets/logo.png" alt="Bons Drinks Logo"></a>
         <p class="ftr-tag">Coquetelaria premium em Santa Maria, RS e região.</p>
       </div>
       <nav class="ftr-links" aria-label="Links do rodapé">
@@ -1993,7 +981,6 @@
   </div>
 </footer>
 
-<!-- FLOAT WA BUTTON -->
 <a href="https://wa.me/5555992275278" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Fale conosco pelo WhatsApp" id="float-wa">
   <svg class="wa-ic" aria-hidden="true"><use href="#wa"></use></svg>
   <span>Orçamento</span>
@@ -2003,7 +990,7 @@
 (function () {
   'use strict';
 
-  /* ---- LOADER ---- */
+  /* LOADER */
   function hideLoader() {
     const l = document.getElementById('loader');
     if (l) { l.classList.add('out'); setTimeout(() => l.remove(), 700); }
@@ -2011,54 +998,35 @@
   window.addEventListener('load', hideLoader);
   setTimeout(hideLoader, 2500);
 
-  /* ---- HEADER STUCK ---- */
+  /* HEADER STUCK */
   const hdr = document.getElementById('hdr');
   window.addEventListener('scroll', () => {
     if (hdr) hdr.classList.toggle('stuck', window.scrollY > 50);
   }, { passive: true });
 
-  /* ---- BURGER / MOBILE NAV ---- */
+  /* BURGER / MOBILE NAV */
   const burger = document.getElementById('burger');
   const mnav   = document.getElementById('mnav');
-
-  function openMenu() {
-    burger.classList.add('open');
-    mnav.classList.add('open');
-    burger.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('locked');
-  }
-  function closeMenu() {
-    burger.classList.remove('open');
-    mnav.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('locked');
-  }
-
+  function openMenu() { burger.classList.add('open'); mnav.classList.add('open'); burger.setAttribute('aria-expanded', 'true'); document.body.classList.add('locked'); }
+  function closeMenu() { burger.classList.remove('open'); mnav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.classList.remove('locked'); }
   if (burger && mnav) {
     burger.addEventListener('click', () => burger.classList.contains('open') ? closeMenu() : openMenu());
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
     mnav.querySelectorAll('.mlink').forEach(a => a.addEventListener('click', closeMenu));
   }
 
-  /* ---- SMOOTH SCROLL ---- */
+  /* SMOOTH SCROLL */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
       const id = this.getAttribute('href');
       if (id === '#') return;
       const el = document.querySelector(id);
-      if (el) {
-        e.preventDefault();
-        closeMenu();
-        const top = el.getBoundingClientRect().top + window.pageYOffset - 85;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+      if (el) { e.preventDefault(); closeMenu(); const top = el.getBoundingClientRect().top + window.pageYOffset - 85; window.scrollTo({ top, behavior: 'smooth' }); }
     });
   });
 
-  /* ---- ACTIVE NAV ---- */
-  const sections = ['inicio','sobre','servicos','eventos','depoimentos','faq','contato']
-    .map(id => document.getElementById(id)).filter(Boolean);
-
+  /* ACTIVE NAV */
+  const sections = ['inicio','sobre','servicos','eventos','depoimentos','faq','contato'].map(id => document.getElementById(id)).filter(Boolean);
   if ('IntersectionObserver' in window && sections.length) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -2072,18 +1040,15 @@
     sections.forEach(s => obs.observe(s));
   }
 
-  /* ---- REVEAL ON SCROLL ---- */
+  /* REVEAL ON SCROLL */
   const revObs = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('in'), i * 60);
-        revObs.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('in'), i * 60); revObs.unobserve(entry.target); }
     });
   }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.rv, .rv-l, .rv-r').forEach(el => revObs.observe(el));
 
-  /* ---- SERVICE TABS ---- */
+  /* SERVICE TABS */
   const tabs  = document.querySelectorAll('.stab');
   const cards = document.querySelectorAll('.scard[data-cat]');
   tabs.forEach(tab => {
@@ -2094,25 +1059,16 @@
       let delay = 0;
       cards.forEach(card => {
         const match = filter === 'all' || card.getAttribute('data-cat') === filter;
-        if (match) {
-          card.style.display = 'flex';
-          card.style.animation = 'none';
-          void card.offsetWidth;
-          card.style.animation = `fadeCardIn .4s ease ${delay}ms both`;
-          delay += 50;
-        } else {
-          card.style.display = 'none';
-        }
+        if (match) { card.style.display = 'flex'; card.style.animation = 'none'; void card.offsetWidth; card.style.animation = `fadeCardIn .4s ease ${delay}ms both`; delay += 50; }
+        else { card.style.display = 'none'; }
       });
     });
   });
-
-  // Add keyframe dynamically
   const style = document.createElement('style');
   style.textContent = '@keyframes fadeCardIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}';
   document.head.appendChild(style);
 
-  /* ---- MARQUEE STRIP ---- */
+  /* MARQUEE STRIP */
   const items = ['Casamentos','Formaturas','Aniversários','Eventos Corporativos','Drinks Autorais','Coquetelaria Artesanal','Santa Maria, RS','Open Bar Premium','Mocktails'];
   const track = document.getElementById('stripTrack');
   if (track) {
@@ -2120,11 +1076,11 @@
     track.innerHTML = all.map(t => `<div class="strip-item"><span class="sdot"></span>${t}</div>`).join('');
   }
 
-  /* ---- COUNT UP ANIMATION ---- */
+  /* FIX 4: COUNT UP com sufixo lido do atributo data-suffix, sem forçar "+" em tudo */
   function countUp(el, target, suffix) {
     let start = 0;
     const dur = 1800;
-    const step = dur / target;
+    const step = Math.max(1, Math.floor(dur / target));
     const timer = setInterval(() => {
       start++;
       el.textContent = start + suffix;
@@ -2139,8 +1095,9 @@
         if (entry.isIntersecting) {
           const el = entry.target;
           const val = parseInt(el.getAttribute('data-count'));
-          const suffix = el.textContent.includes('+') ? '+' : '';
-          countUp(el, val, suffix || (val < 100 ? '+' : '+'));
+          /* FIX 4: usa data-suffix definido no HTML; padrão vazio se não existir */
+          const suffix = el.getAttribute('data-suffix') || '';
+          countUp(el, val, suffix);
           cntObs.unobserve(el);
         }
       });
